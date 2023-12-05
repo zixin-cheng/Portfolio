@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera, Sparkles } from '@react-three/drei';
 import { gsap } from 'gsap';
 
 export const CameraTimeline = new gsap.timeline({
@@ -51,7 +51,11 @@ function AnimatedCamera(props) {
     );
   }, [cameraRef]);
 
-  return <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 20]} rotation={[0, -0, 0]} />;
+  return (
+    <group dispose={null}>
+      <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 6, 12]} rotation={[0, 0, 0]} />
+    </group>
+  );
 }
 
 export default AnimatedCamera;

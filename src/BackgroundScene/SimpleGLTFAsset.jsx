@@ -4,28 +4,31 @@ import { useGLTF, useAnimations, useScroll } from '@react-three/drei';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { gsap } from 'gsap';
 
+import Blob from './assets/Abstract-shape.tsx';
+
 function SimpleGLTFAsset(props) {
-  const modelRef = useRef();
   const group = useRef();
   const { position, scale, modelUrl } = props;
   // const gltf = useGLTF(modelUrl);
   const gltf = useLoader(GLTFLoader, 'assets/abstract-shape.glb');
-  const [rotationSpeed, setRotationSpeed] = useState(0.0001);
+  // const [rotationSpeed, setRotationSpeed] = useState(0.0001);
 
-  useFrame(() => {
-    modelRef.current.rotation.x += rotationSpeed;
-    modelRef.current.rotation.y -= rotationSpeed;
-    modelRef.current.rotation.z += rotationSpeed;
-  });
+  // const modelRef = useRef();
+  // useFrame(() => {
+  //   modelRef.current.rotation.x += rotationSpeed;
+  //   modelRef.current.rotation.y -= rotationSpeed;
+  //   modelRef.current.rotation.z += rotationSpeed;
+  // });
 
   return (
-    <group ref={group} dispose={null}>
-      <primitive
+    <group dispose={null}>
+      {/* <primitive
         ref={modelRef}
         position={position ? position : [0, 0, 0]}
         scale={scale ? scale : [3, 3, 3]}
         object={gltf.scene}
-      ></primitive>
+      ></primitive> */}
+      <Blob scale={[3, 3, 3]} rotation={[0, 0, 0]} />
     </group>
   );
 }

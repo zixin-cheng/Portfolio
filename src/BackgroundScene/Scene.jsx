@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, Sparkles } from '@react-three/drei';
+import { PerspectiveCamera, Sparkles, Environment } from '@react-three/drei';
 import { Suspense } from 'react';
 
 import SimpleGLTFAsset from './SimpleGLTFAsset';
@@ -13,12 +13,17 @@ function Scene() {
       <Canvas>
         {/* Camera 🎥 */}
         <AnimatedCamera />
-        <Sparkles size={10} color={'#fff'} scale={[10, 10, 10]}></Sparkles>
+        <Environment preset="dawn" resolution={64} />
+        <Sparkles count={10} size={30} color={'#aa8fdb'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={10} size={50} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={10} size={30} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={10} size={50} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={50} size={20} color={'#ffaa75'} position={[0, 0, -20]} scale={[100, 100, 100]}></Sparkles>
 
         {/* Lights 💡 */}
         <SimpleLight position={[1, 0, 0]} color={'red'} />
-        <SimpleLight position={[-1, 0.5, 0]} color={'blue'} />
-        <SimpleLight position={[-1, -0.5, 0]} color={'green'} />
+        {/* <SimpleLight position={[-1, 0.5, 0]} color={'blue'} /> */}
+        {/* <SimpleLight position={[-1, -0.5, 0]} color={'green'} /> */}
         {/* <pointLight position={[0, 0, 10]} intensity={10} /> */}
 
         {/* We can create a background color as a child element of the canvas we just have to attach it */}

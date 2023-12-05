@@ -1,9 +1,12 @@
 :root {
   /* color */
-  --c-magenta: rgb(115 44 153);
+  --c-magenta: rgb(145, 84, 178);
   --c-light-grey: rgb(157, 157, 157);
+  --c-dark-grey: rgb(45, 39, 85);
 
   /* font-families */
   --ff-roboto: 'Roboto Mono', monospace;
   --ff-gloock: 'Gloock', serif;
+  --ff-marcellus: 'Marcellus', serif;
+  --ff-poppins: 'Poppins', san-serif;
 }

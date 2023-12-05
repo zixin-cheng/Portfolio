@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import ScrollToTop from './components/ScrollToTop';
+import { ScrollRestoration } from 'react-router-dom';
 
 import NavigationBar from './components/NavigationBar';
 import Landing from './Landing';
@@ -10,6 +12,18 @@ import styles from './ProjectCard/ProjectCard.module.css';
 import './styles/global.css';
 import Scene from './BackgroundScene/Scene';
 import { CameraTimeline } from './BackgroundScene/AnimatedCamera';
+
+// import Stats from 'stats.js';
+
+// const stats = new Stats();
+// stats.showPanel(0);
+// document.body.appendChild(stats.dom);
+// function animate() {
+//   stats.begin();
+//   stats.end();
+//   requestAnimationFrame(animate);
+// }
+// requestAnimationFrame(animate);
 
 /**
  * This function will calculate how much the user has scrolled (0-1)
@@ -40,13 +54,16 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.article_wrapper}>
+    <div>
       <NavigationBar />
-      <Landing />
-      <Projects />
-      <ContactInfo />
+      <div className={styles.article_wrapper}>
+        <ScrollToTop />
+        <Landing />
+        <Projects />
+        <ContactInfo />
 
-      <Scene />
+        <Scene />
+      </div>
     </div>
   );
 }

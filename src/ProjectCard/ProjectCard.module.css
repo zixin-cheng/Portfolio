@@ -82,8 +82,11 @@ h1 {
 
 .project_title,
 .list_title {
-  font-family: var(--ff-gloock);
+  font-family: var(--ff-roboto);
   font-weight: 400;
+  color: var(--c-dark-grey);
+  line-height: 7rem;
+  letter-spacing: -0.2rem;
 }
 
 a {
@@ -93,7 +96,6 @@ a {
 .project_title {
   margin: 0;
   font-size: 6rem;
-  color: var(--c-light-grey);
   transition: 0.2s;
 
   &:hover {
@@ -102,13 +104,8 @@ a {
   }
 }
 
-/* .list_title {
-  margin: 0.5rem 0;
-  font-size: 1.625rem;
-  color: #48b2ff;
-} */
-
 p {
+  font-family: var(--ff-roboto);
   margin: 0;
   color: var(--c-light-grey);
 }
@@ -117,8 +114,8 @@ p {
   .project_title {
     margin: 0;
     font-size: 3rem;
-    color: var(--c-light-grey);
     transition: 0.2s;
+    line-height: 3rem;
 
     &:hover {
       color: var(--c-magenta);

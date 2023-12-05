@@ -5,19 +5,43 @@
   justify-content: space-between;
   position: sticky;
   z-index: 60;
-  top: 0.5rem;
+  top: 1.5rem;
   height: 0;
-  margin-left: 0.5rem;
-  margin-right: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .menu_wrapper {
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 3rem;
 }
 
-.intro_wrapper,
+.menu_text {
+  font-family: var(--ff-roboto);
+  color: var(--c-dark-grey);
+  font-size: 1.5rem;
+  letter-spacing: -0.1rem;
+  &:hover {
+    color: var(--c-magenta);
+    transition: 0.2s;
+  }
+}
+
+.intro_wrapper {
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  top: 5%;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
 .contact_wrapper {
   position: absolute;
   z-index: 50;
@@ -48,25 +72,34 @@
 }
 
 .intro_header,
-.intro_paragraph,
 .contact_header {
-  font-family: var(--ff-gloock);
+  font-family: var(--ff-roboto);
   align-items: center;
   text-align: center;
+  letter-spacing: -0.2rem;
   margin: 0;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 0 40px, rgba(255, 255, 255, 0.5) 0 0 80px;
 }
 
 .intro_header,
 .contact_header {
-  font-size: 8rem;
-  color: rgb(202 86 255 / 55%);
+  font-size: 7rem;
+  color: var(--c-dark-grey);
+  /* text-shadow: rgba(255, 255, 255, 0.5) 0 0 30px; */
+  /* letter-spacing: -0.4rem; */
+  font-weight: 1000;
 }
 
 .intro_paragraph {
-  font-family: var(--ff-roboto);
-  font-size: 1rem;
-  color: rgb(157 157 157);
+  font-family: var(--ff-poppins);
+  color: var(--c-dark-grey);
+  font-size: 1.5rem;
   width: 70%;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 0 10px, rgba(255, 255, 255) 0 0 30px, rgba(255, 255, 255, 0.5) 0 0 60px,
+    rgba(255, 255, 255, 0.8) 0 0 80px;
 }
 
 .contact_button {
@@ -75,7 +108,7 @@
   border: 2px solid var(--c-magenta);
   border-radius: 15px;
   box-sizing: border-box;
-  color: var(--c-light-grey);
+  color: var(--c-dark-grey);
   pointer-events: all;
   cursor: pointer;
   display: inline-block;
@@ -117,16 +150,13 @@
   .intro_header,
   .contact_header {
     font-size: 3rem;
-    color: rgb(202 86 255 / 55%);
   }
-}
 
-.menu_text {
-  font-family: var(--ff-roboto);
-  color: rgb(157 157 157);
-  font-size: 1.5rem;
-  &:hover {
-    color: var(--c-magenta);
-    transition: 0.2s;
+  .menu_wrapper {
+    gap: 1.5rem;
+  }
+
+  .menu_text {
+    font-size: 1rem;
   }
 }

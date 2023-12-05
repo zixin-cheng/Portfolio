@@ -3,6 +3,7 @@ import Card from './Card';
 import ProjectInfo from './ProjectInfo';
 import CoverImg from './CoverImg';
 import styles from './ProjectCard.module.css';
+
 import { Link } from 'react-router-dom';
 
 export default function ProjectCard(props) {
@@ -29,7 +30,15 @@ export default function ProjectCard(props) {
   const project = props.project;
   return (
     <div>
-      <Link to={project.pgSrc}>
+      <Link
+        to={project.pgSrc}
+        onClick={() => {
+          window.scroll({
+            top: 0,
+            left: 0,
+          });
+        }}
+      >
         <Card>
           <div onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
             <ProjectInfo title={project.title} description={project.description} />
