@@ -15,6 +15,16 @@ body {
   margin-right: 3rem;
 }
 
+.footer_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 60;
+  margin-bottom: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  gap: 3rem;
+}
+
 .menu_wrapper {
   display: flex;
   justify-content: flex-end;
@@ -26,6 +36,16 @@ body {
   color: var(--c-dark-grey);
   font-size: 1.5rem;
   letter-spacing: -0.1rem;
+  &:hover {
+    color: var(--c-magenta);
+    transition: 0.2s;
+  }
+}
+
+.footer_text {
+  font-family: var(--ff-roboto);
+  color: var(--c-light-grey);
+  font-size: 1rem;
   &:hover {
     color: var(--c-magenta);
     transition: 0.2s;

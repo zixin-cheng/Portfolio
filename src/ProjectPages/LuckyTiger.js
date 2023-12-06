@@ -6,6 +6,7 @@ import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
 import FooterNav from './components/FooterNav';
+import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
 
@@ -68,6 +69,7 @@ export default function LuckyTiger() {
         </div>
         <FooterNav prev={'WPP House'} prevSrc={'/wpp-house'} next={'2022 Demo Reel'} nextSrc={'/2022-demo-reel'} />
       </div>
+      <Footer />
     </div>
   );
 }

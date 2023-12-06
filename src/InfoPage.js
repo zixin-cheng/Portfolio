@@ -1,7 +1,8 @@
 import Navigationbar from './components/NavigationBar';
 import Image from './ProjectPages/components/Image';
-import InfoStrip from './ProjectPages/components/InfoStrip';
 import Paragraph from './ProjectPages/components/Paragraph';
+import Footer from './components/Footer';
+
 import styles from './ProjectPages/ProjectPage.module.css';
 
 export default function InfoPage() {
@@ -77,6 +78,7 @@ export default function InfoPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

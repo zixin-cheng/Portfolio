@@ -6,6 +6,7 @@ import NavigationBar from './components/NavigationBar';
 import Landing from './Landing';
 import ContactInfo from './ContactInfo';
 import Projects from './LandingPage/Projects';
+import Footer from './components/Footer';
 import ProjectCard from './ProjectCard';
 import { PROJECT_LIST } from './ProjectCard/project-data';
 import styles from './ProjectCard/ProjectCard.module.css';
@@ -65,6 +66,7 @@ function App() {
         <ContactInfo />
 
         <Scene />
+        <Footer />
       </div>
     </div>
   );

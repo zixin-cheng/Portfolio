@@ -13,19 +13,12 @@ export default function Projects(props) {
           <div className={styles.menu_text}>Projects</div>
         </HashLink>
 
-        <Link
-          to={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className={styles.menu_text}>Dev</div>
-        </Link>
         <Link to={'/info-page'}>
           <div className={styles.menu_text}>Info</div>
         </Link>
-        <HashLink to="/#contact" smooth>
+        {/* <HashLink to="/#contact" smooth>
           <div className={styles.menu_text}>Contact</div>
-        </HashLink>
+        </HashLink> */}
       </div>
     </div>
   );

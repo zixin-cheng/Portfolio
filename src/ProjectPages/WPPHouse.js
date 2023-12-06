@@ -6,6 +6,7 @@ import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
 import FooterNav from './components/FooterNav';
+import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
 
@@ -100,6 +101,7 @@ This holistic approach, encompassing interactive tools and a dynamic website, en
           nextSrc={'/lucky-tiger'}
         />
       </div>
+      <Footer />
     </div>
   );
 }

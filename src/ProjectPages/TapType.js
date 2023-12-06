@@ -6,6 +6,7 @@ import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
 import FooterNav from './components/FooterNav';
+import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
 
@@ -78,6 +79,7 @@ export default function TapType() {
           nextSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
         />
       </div>
+      <Footer />
     </div>
   );
 }
