@@ -1,7 +1,6 @@
 @import '../styles/vars.css';
 
 body {
-  background-color: rgb(180, 129, 129);
   background-color: rgb(248, 248, 248);
 }
 
@@ -19,7 +18,8 @@ body {
 .info_wrapper,
 .infoPage_wrapper,
 .video_wrapper_landscape,
-.image_wrapper_landscape {
+.image_wrapper_landscape,
+.footer_nav_wrapper {
   width: 60%;
   max-width: 80%;
 }
@@ -73,11 +73,12 @@ body {
 
 .project_title {
   margin: 0;
-  font-size: 6rem;
+  font-size: 5rem;
   color: rgb(0, 0, 0);
   font-family: var(--ff-roboto);
   font-weight: 400;
   letter-spacing: -0.3rem;
+  line-height: 5rem;
 }
 
 .h1 {
@@ -186,6 +187,22 @@ caption {
   max-height: 80vh;
 }
 
+.footer_nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.footer_nav_text {
+  font-family: var(--ff-roboto);
+  font-size: 1.2rem;
+  color: var(--c-dark-grey);
+  &:hover {
+    color: var(--c-magenta);
+    transition: 0.2s;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .content_wrapper {
     margin-top: 100px;
@@ -198,7 +215,8 @@ caption {
   .info_wrapper,
   .video_wrapper_landscape,
   .image_wrapper_landscape,
-  .paragraph_wrapper {
+  .paragraph_wrapper,
+  .footer_nav_wrapper {
     width: 85%;
     max-width: 85%;
   }

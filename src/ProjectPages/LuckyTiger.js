@@ -5,6 +5,7 @@ import ImageHero from './components/ImageHero';
 import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
+import FooterNav from './components/FooterNav';
 
 import styles from './ProjectPage.module.css';
 
@@ -19,8 +20,6 @@ export default function LuckyTiger() {
     This is an in-house project created under the internship with Superunion for the 2022 Chinese New Year. 
     <br/><br/>
     My main role includes assisting in designing UI assets and front-end development with HTML/CSS and Three.js.
-    <br/><br/>
-    <a href="https://superunion.com/cny2022/index.html" target="_blank" rel="noopener noreferrer">https://superunion.com/cny2022/index.html</a>
   `}
         />
         <ImageHero imgSrc={require('./assets/LuckyTiger/luckytiger_hero.jpeg')} />
@@ -28,7 +27,6 @@ export default function LuckyTiger() {
           roles={['Frontend Development', 'Visual Designer']}
           teams={['Jessica Tan', 'Paola Demichelis']}
           deliverables={['Interactive Website']}
-          duration={'~ 1 month'}
         />
         <Paragraph
           content={`
@@ -68,6 +66,7 @@ export default function LuckyTiger() {
             caption={'Social Media & Skin Design'}
           />
         </div>
+        <FooterNav prev={'WPP House'} prevSrc={'/wpp-house'} next={'2022 Demo Reel'} nextSrc={'/2022-demo-reel'} />
       </div>
     </div>
   );

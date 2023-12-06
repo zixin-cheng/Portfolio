@@ -13,7 +13,7 @@ function Scene() {
       <Canvas>
         {/* Camera 🎥 */}
         <AnimatedCamera />
-        <Environment preset="dawn" resolution={64} />
+        <Environment preset="dawn" resolution={32} />
         <Sparkles count={10} size={30} color={'#aa8fdb'} scale={[20, 20, 20]}></Sparkles>
         <Sparkles count={10} size={50} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
         <Sparkles count={10} size={30} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
@@ -27,7 +27,7 @@ function Scene() {
         {/* <pointLight position={[0, 0, 10]} intensity={10} /> */}
 
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
-        <color args={['#fff']} attach="background" />
+        <color args={['rgb(248, 248, 248)']} attach="background" />
 
         {/* Objects 📦 */}
         <Suspense fallback={null}>

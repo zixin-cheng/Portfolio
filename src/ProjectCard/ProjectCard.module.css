@@ -2,7 +2,6 @@
 
 .article_wrapper {
   position: relative;
-  background-color: grey;
   height: 300vh; /* Length of the interactive scroll article */
   top: 0;
 }
@@ -60,7 +59,7 @@ h1 {
   width: auto;
   height: 30vh;
   opacity: 1;
-  transition: 0.2s;
+  /* transition: 0.1s; */
   pointer-events: none;
 }
 

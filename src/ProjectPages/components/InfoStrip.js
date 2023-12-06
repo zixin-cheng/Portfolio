@@ -37,10 +37,10 @@ export default function InfoStrip(props) {
         </ul>
       </div>
 
-      <div className={styles.info_column}>
+      {/* <div className={styles.info_column}>
         <h1>Duration</h1>
         <p>{duration}</p>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import ImageHero from './components/ImageHero';
 import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
+import FooterNav from './components/FooterNav';
 
 import styles from './ProjectPage.module.css';
 
@@ -70,6 +71,12 @@ export default function TapType() {
             caption={`Ipad Brush`}
           />
         </div>
+        <FooterNav
+          prev={'2022 Demo Reel'}
+          prevSrc={'/2022-demo-reel'}
+          next={'Dev'}
+          nextSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
+        />
       </div>
     </div>
   );

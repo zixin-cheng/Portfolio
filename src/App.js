@@ -13,8 +13,10 @@ import './styles/global.css';
 import Scene from './BackgroundScene/Scene';
 import { CameraTimeline } from './BackgroundScene/AnimatedCamera';
 
+/**
+Check performance of background scene
+ */
 // import Stats from 'stats.js';
-
 // const stats = new Stats();
 // stats.showPanel(0);
 // document.body.appendChild(stats.dom);

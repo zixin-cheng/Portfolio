@@ -5,10 +5,9 @@ Command: npx gltfjsx@6.2.15 abstract-shape.glb --types
 
 import * as THREE from 'three';
 import React, { useRef, useState } from 'react';
-import { Caustics, useGLTF, MeshTransmissionMaterial, MeshRefractionMaterial, CubeCamera } from '@react-three/drei';
+import { Caustics, useGLTF, MeshTransmissionMaterial } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { GLTF } from 'three-stdlib';
-import { LayerMaterial, Fresnel, Depth, Noise } from 'lamina';
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -44,11 +43,11 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
   });
   const mat = (
     <MeshTransmissionMaterial
-      resolution={1024}
+      resolution={64}
       distortion={0.25}
       color="rgb(180, 129, 129)"
-      thickness={1}
-      anisotropy={0}
+      thickness={0.5}
+      anisotropy={1}
     />
   );
 
@@ -75,7 +74,6 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Shape004.geometry} position={[0.44, 0.005, -0.064]} rotation={[-0.911, -0.597, 2.086]}>
         {' '}
         {matMetal}
-        {/* <meshStandardMaterial color="white" roughness={0.1} metalness={0.925} /> */}
       </mesh>
 
       <mesh geometry={nodes.Shape011.geometry} rotation={[-0.096, -0.241, 2.015]}>
@@ -83,7 +81,7 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
       </mesh>
 
       <mesh geometry={nodes.Shape012.geometry} rotation={[2.037, -1.023, -0.056]}>
-        <MeshTransmissionMaterial resolution={1024} distortion={0.5} color="#d1b3ff" thickness={1} anisotropy={1} />
+        <MeshTransmissionMaterial resolution={512} distortion={0.5} color="#d1b3ff" thickness={1} anisotropy={1} />
       </mesh>
 
       <mesh geometry={nodes.Shape013.geometry} rotation={[0.658, 0.98, -2.575]}>
@@ -91,6 +89,10 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
       </mesh>
 
       <mesh geometry={nodes.Shape014.geometry} rotation={[0.247, 0.081, -2.004]}>
+        <MeshTransmissionMaterial resolution={128} distortion={0.5} color="#92bfd6" thickness={1} anisotropy={0} />
+      </mesh>
+
+      {/* <mesh geometry={nodes.Shape014.geometry} rotation={[0.247, 0.081, -2.004]}>
         <LayerMaterial
           color={'#ffffff'}
           lighting={'physical'} //
@@ -101,7 +103,7 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
           <Depth near={0} far={1} origin={[-0.5, 0.5, 0]} colorA={'#fec5da'} colorB={'#00b8fe'} />
           <Fresnel color={'#fefefe'} bias={0} intensity={2} power={3} factor={0} mode={'screen'} />
         </LayerMaterial>
-      </mesh>
+      </mesh> */}
     </group>
   );
 }

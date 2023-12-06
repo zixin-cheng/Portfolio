@@ -2,6 +2,7 @@ import IntroStrip from './components/IntroStrip';
 import Navigationbar from '../components/NavigationBar';
 import Paragraph from './components/Paragraph';
 import Video from './components/Video';
+import FooterNav from './components/FooterNav';
 
 import styles from './ProjectPage.module.css';
 
@@ -38,6 +39,7 @@ export default function DemoReel() {
           caption={`2022 Demo Reel
 `}
         />
+        <FooterNav prev={'Lucky Tiger'} prevSrc={'/lucky-tiger'} next={'TapType'} nextSrc={'/taptype'} />
       </div>
     </div>
   );

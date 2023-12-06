@@ -5,6 +5,7 @@ import ImageHero from './components/ImageHero';
 import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
+import FooterNav from './components/FooterNav';
 
 import styles from './ProjectPage.module.css';
 
@@ -28,7 +29,6 @@ export default function WPPHouse() {
           roles={['Creative Developer', 'Visual Designer']}
           teams={['Jessica Tan', 'Paola Demichelis']}
           deliverables={['Event Website', 'Interactive Tools']}
-          duration={'~ 1 month'}
         />
 
         <Paragraph
@@ -92,6 +92,12 @@ This holistic approach, encompassing interactive tools and a dynamic website, en
           orientation={'landscape'}
           caption={`Website Walkthrough
 `}
+        />
+        <FooterNav
+          prev={'Dev'}
+          prevSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
+          next={'Lucky Tiger'}
+          nextSrc={'/lucky-tiger'}
         />
       </div>
     </div>
