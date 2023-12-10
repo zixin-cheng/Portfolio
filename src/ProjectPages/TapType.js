@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import IntroStrip from './components/IntroStrip';
 import Navigationbar from '../components/NavigationBar';
 import Paragraph from './components/Paragraph';
@@ -11,6 +13,9 @@ import Footer from '../components/Footer';
 import styles from './ProjectPage.module.css';
 
 export default function TapType() {
+  useEffect(() => {
+    document.title = 'TapType — Jane Cheng';
+  }, []);
   return (
     <div>
       <Navigationbar />

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import IntroStrip from './components/IntroStrip';
 import Navigationbar from '../components/NavigationBar';
 import Paragraph from './components/Paragraph';
@@ -8,11 +10,29 @@ import Footer from '../components/Footer';
 import styles from './ProjectPage.module.css';
 
 export default function DemoReel() {
+  useEffect(() => {
+    document.title = '2022 Demo Reel — Jane Cheng';
+  }, []);
   return (
     <div>
       <Navigationbar />
       <div className={styles.content_wrapper}>
         <IntroStrip tags={'MOTION DESIGN & CREATIVE CODING'} title={'2022 Demo Reel'} />
+
+        <Paragraph
+          header={'2D/3D Motion Design Reel'}
+          content={`
+          Please enjoy a selection of motion design projects that I've worked on this year! Most of these works are freelance projects for Superunion with clients such as Singapore Brand Office, Intel, Infosys, CDF, Volkswagen, etc.
+  `}
+        />
+
+        <Video
+          videoSrc={require('./assets/DemoReel/2022MotionReel.mp4')}
+          orientation={'landscape'}
+          caption={`2022 Demo Reel
+`}
+        />
+
         <Paragraph
           header={'Generative Design Reel'}
           content={`
@@ -27,19 +47,6 @@ export default function DemoReel() {
 `}
         />
 
-        <Paragraph
-          header={'2D/3D Motion Design Reel'}
-          content={`
-          Please enjoy a selection of motion design projects that I've worked on this year! Most of these works are freelance projects for Superunion with clients such as Singapore Brand Office, Great Eastern, CDF, Volkswagen, etc.
-  `}
-        />
-
-        <Video
-          videoSrc={require('./assets/DemoReel/2022MotionReel.mp4')}
-          orientation={'landscape'}
-          caption={`2022 Demo Reel
-`}
-        />
         <FooterNav prev={'Lucky Tiger'} prevSrc={'/lucky-tiger'} next={'TapType'} nextSrc={'/taptype'} />
       </div>
       <Footer />

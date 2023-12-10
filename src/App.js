@@ -42,6 +42,9 @@ function getScrollProgress() {
 }
 
 function App() {
+  useEffect(() => {
+    document.title = 'Jane Cheng';
+  }, []);
   // Set the animation to play based on scroll position
   useEffect(() => {
     // We then register a callback that executes every time the user scrolls

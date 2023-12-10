@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import IntroStrip from './components/IntroStrip';
 import Navigationbar from '../components/NavigationBar';
 import Paragraph from './components/Paragraph';
@@ -11,6 +13,9 @@ import Footer from '../components/Footer';
 import styles from './ProjectPage.module.css';
 
 export default function LuckyTiger() {
+  useEffect(() => {
+    document.title = 'Lucky Tiger — Jane Cheng';
+  }, []);
   return (
     <div>
       <Navigationbar />
@@ -20,7 +25,7 @@ export default function LuckyTiger() {
           content={`
     This is an in-house project created under the internship with Superunion for the 2022 Chinese New Year. 
     <br/><br/>
-    My main role includes assisting in designing UI assets and front-end development with HTML/CSS and Three.js.
+    My main role includes assisting in designing the UI/UX experience as well as front-end development with HTML/CSS and Three.js.
   `}
         />
         <ImageHero imgSrc={require('./assets/LuckyTiger/luckytiger_hero.jpeg')} />

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import Navigationbar from './components/NavigationBar';
 import Image from './ProjectPages/components/Image';
 import Paragraph from './ProjectPages/components/Paragraph';
@@ -6,6 +8,9 @@ import Footer from './components/Footer';
 import styles from './ProjectPages/ProjectPage.module.css';
 
 export default function InfoPage() {
+  useEffect(() => {
+    document.title = 'Info — Jane Cheng';
+  }, []);
   return (
     <div>
       <Navigationbar />
@@ -14,7 +19,7 @@ export default function InfoPage() {
           <Image imgSrc={require('./assets/profilepic.jpg')} orientation={'portrait'} caption={''} />
           <Paragraph
             content={`
-          I'm a creative technologist based in New York, dedicated to crafting immersive experiences that seamlessly blend technology and design. While my expertise lies in motion design, I also explore a wide range of mediums, including XR and interactive web pages. Over the course of my career, I've had the privilege of collaborating with renowned companies like Intel, Volkswagen, Infosys, Tecent, Wix.com, and more.
+          I'm a creative technologist based in New York, dedicated to crafting immersive experiences that seamlessly blend technology and design. While my expertise lies in motion design, I also explore a wide range of mediums, including AR and interactive web experiences. Over the course of my career, I've had the privilege of collaborating with renowned companies like Intel, Volkswagen, Infosys, Tecent, Wix.com, and more.
 
           ​<br/>​<br/>
           
