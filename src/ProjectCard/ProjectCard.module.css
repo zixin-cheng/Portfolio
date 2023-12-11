@@ -1,5 +1,17 @@
 @import '../styles/vars.css';
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    top: 2%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 .article_wrapper {
   position: relative;
   height: 300vh; /* Length of the interactive scroll article */
@@ -13,6 +25,8 @@
   width: 100%;
   height: 100vh;
   align-content: center;
+  opacity: 0;
+  animation: fade-in 1.5s ease-in-out 0.5s forwards;
 }
 
 /* .menu_wrapper {
