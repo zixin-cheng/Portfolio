@@ -5,7 +5,7 @@ export default function InfoStrip(props) {
   return (
     <div className={styles.info_wrapper}>
       <div className={styles.info_column}>
-        <h1>Team Members</h1>
+        <h1>My Role</h1>
         <ul>
           {roles.map((i, index) => (
             <li key={index}>
@@ -16,7 +16,7 @@ export default function InfoStrip(props) {
       </div>
 
       <div className={styles.info_column}>
-        <h1>My Role</h1>
+        <h1>Team Members</h1>
         <ul>
           {teams.map((i, index) => (
             <li key={index}>

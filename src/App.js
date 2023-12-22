@@ -3,12 +3,10 @@ import ScrollToTop from './components/ScrollToTop';
 import { ScrollRestoration } from 'react-router-dom';
 
 import NavigationBar from './components/NavigationBar';
-import Landing from './Landing';
-import ContactInfo from './ContactInfo';
+import Landing from './LandingPage/Landing';
+import ContactInfo from './LandingPage/ContactInfo';
 import Projects from './LandingPage/Projects';
 import Footer from './components/Footer';
-import ProjectCard from './ProjectCard';
-import { PROJECT_LIST } from './ProjectCard/project-data';
 import styles from './ProjectCard/ProjectCard.module.css';
 import './styles/global.css';
 import Scene from './BackgroundScene/Scene';

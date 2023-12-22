@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import ScrollToTop from './components/ScrollToTop';
 import WPPHouse from './ProjectPages/WPPHouse';
 import LuckyTiger from './ProjectPages/LuckyTiger';
 import DemoReel from './ProjectPages/2022DemoReel';
 import TapType from './ProjectPages/TapType';
 import InfoPage from './InfoPage';
+import ProjectArchive from './ArchivePage';
 import { createBrowserRouter, RouterProvider, ScrollRestoration, Route, Link } from 'react-router-dom';
+import WorldCheeseAward from './ProjectPages/WorldCheeseAward';
+import HeartsAndBones from './ProjectPages/HeartsAndBones';
+import LashInBloom from './ProjectPages/LashInBloom';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: 'info-page',
     element: <InfoPage />,
+  },
+  {
+    path: 'archive',
+    element: <ProjectArchive />,
   },
   {
     path: 'wpp-house',
@@ -33,6 +40,18 @@ const router = createBrowserRouter([
   {
     path: 'taptype',
     element: <TapType />,
+  },
+  {
+    path: 'world-cheese-award',
+    element: <WorldCheeseAward />,
+  },
+  {
+    path: 'hearts-and-bones',
+    element: <HeartsAndBones />,
+  },
+  {
+    path: 'lash-in-bloom',
+    element: <LashInBloom />,
   },
 ]);
 

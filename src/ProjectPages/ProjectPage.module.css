@@ -33,7 +33,8 @@ body {
 .infoPage_wrapper,
 .video_wrapper_landscape,
 .image_wrapper_landscape,
-.footer_nav_wrapper {
+.footer_nav_wrapper,
+.filter_wrapper {
   width: 60%;
   max-width: 80%;
 }
@@ -178,8 +179,7 @@ caption {
   max-width: 85%;
 }
 
-.imgstrip_wrapper .video_wrapper_square,
-.imgstrip_wrapper .image_wrapper_square {
+.imgstrip_wrapper .imgstrip_wrapper {
   width: 45%;
 }
 
@@ -215,6 +215,56 @@ caption {
     color: var(--c-magenta);
     transition: 0.2s;
   }
+}
+
+.filter_wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--c-magenta);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: var(--c-dark-grey);
+  pointer-events: all;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--ff-roboto);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  margin-top: 10px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.projects_wrapper {
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 3rem;
+}
+
+.project_wrapper {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project_wrapper img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 767px) {
@@ -263,4 +313,8 @@ caption {
 .infoPage_wrapper .image_wrapper_porttrait {
   width: 100%;
   height: auto;
+}
+
+.imgstrip_wrapper .video_wrapper_landscape {
+  width: 47.5%;
 }

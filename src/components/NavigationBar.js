@@ -9,7 +9,8 @@ export default function Projects(props) {
         <div className={styles.menu_text}>Jane Cheng</div>
       </HashLink>
       <div className={styles.menu_wrapper}>
-        <HashLink to="/#projects" smooth>
+        {/* <HashLink to="/#projects" smooth> */}
+        <HashLink to="/archive" smooth>
           <div className={styles.menu_text}>Projects</div>
         </HashLink>
 

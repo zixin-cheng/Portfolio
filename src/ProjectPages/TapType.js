@@ -53,11 +53,21 @@ export default function TapType() {
           This tool is currently still in development. Check out the demos below.`}
         />
         <div className={styles.imgstrip_wrapper}>
-          <Video videoSrc={require('./assets/TapType/月.mov')} orientation={'square'} caption={`月`} />
-          <Video videoSrc={require('./assets/TapType/海市蜃楼.mov')} orientation={'square'} caption={`海市蜃楼`} />
-          <Video videoSrc={require('./assets/TapType/SP.mov')} orientation={'square'} caption={`SP`} />
-          <Video videoSrc={require('./assets/TapType/tomato.mov')} orientation={'square'} caption={`TOMATO`} />
-          <Video videoSrc={require('./assets/TapType/EGG.mp4')} orientation={'square'} caption={`EGG`} />
+          <Video videoSrc={require('./assets/TapType/月.mov')} orientation={'square'} caption={`月`} loop={'loop'} />
+          <Video
+            videoSrc={require('./assets/TapType/海市蜃楼.mov')}
+            orientation={'square'}
+            caption={`海市蜃楼`}
+            loop={'loop'}
+          />
+          <Video videoSrc={require('./assets/TapType/SP.mov')} orientation={'square'} caption={`SP`} loop={'loop'} />
+          <Video
+            videoSrc={require('./assets/TapType/tomato.mov')}
+            orientation={'square'}
+            caption={`TOMATO`}
+            loop={'loop'}
+          />
+          <Video videoSrc={require('./assets/TapType/EGG.mp4')} orientation={'square'} caption={`EGG`} loop={'loop'} />
         </div>
 
         <Paragraph
@@ -80,8 +90,8 @@ export default function TapType() {
         <FooterNav
           prev={'2022 Demo Reel'}
           prevSrc={'/2022-demo-reel'}
-          next={'Dev'}
-          nextSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
+          next={'World Cheese Award'}
+          nextSrc={'/world-cheese-award'}
         />
       </div>
       <Footer />
