@@ -67,7 +67,7 @@ function App() {
         <ContactInfo />
 
         <Scene />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
