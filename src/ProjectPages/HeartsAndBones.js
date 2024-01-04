@@ -189,7 +189,7 @@ export default function HeartsAndBones() {
           <br>
           As a part of the Wix Design Academy, we built the final website with the Wix Editor.
           <br><br>
-          <a href="https://support.wwf.org.uk/adopt-a-tiger" target="_blank" rel="noopener noreferrer">View the final live website here </a>
+          <a href="https://janecheng1026.wixsite.com/heartsandbones" target="_blank" rel="noopener noreferrer">View the final live website here </a>
           <br>
           Note: The website is updated by Hearts & Bones staff after completion of this project. Therefore, current website might vary from the designs shown in this presentation
           `}
