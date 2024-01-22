@@ -11,6 +11,7 @@ import { createBrowserRouter, RouterProvider, ScrollRestoration, Route, Link } f
 import WorldCheeseAward from './ProjectPages/WorldCheeseAward';
 import HeartsAndBones from './ProjectPages/HeartsAndBones';
 import LashInBloom from './ProjectPages/LashInBloom';
+import K5 from './ProjectPages/K5';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: 'lash-in-bloom',
     element: <LashInBloom />,
+  },
+  {
+    path: 'k5',
+    element: <K5 />,
   },
 ]);
 

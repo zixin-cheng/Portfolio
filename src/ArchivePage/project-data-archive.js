@@ -18,6 +18,12 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['Motion Design', 'Creative Dev'],
   },
   {
+    title: 'K-5',
+    imgSrc: require('../ProjectPages/assets/K5/k5_cover.png'),
+    pgSrc: '/k5',
+    category: ['Creative Dev', 'UI/UX'],
+  },
+  {
     title: 'TapType',
     imgSrc: require('../assets/taptype_cover.png'),
     pgSrc: '/taptype',

@@ -87,12 +87,7 @@ export default function TapType() {
             caption={`Ipad Brush`}
           />
         </div>
-        <FooterNav
-          prev={'2022 Demo Reel'}
-          prevSrc={'/2022-demo-reel'}
-          next={'World Cheese Award'}
-          nextSrc={'/world-cheese-award'}
-        />
+        <FooterNav prev={'K-5'} prevSrc={'/k5'} next={'World Cheese Award'} nextSrc={'/world-cheese-award'} />
       </div>
       <Footer />
     </div>
