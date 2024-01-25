@@ -111,10 +111,15 @@ body {
 h1 {
   font-family: var(--ff-roboto);
   display: contents;
-  color: rgb(0, 0, 0);
+  color: var(--c-dark-grey);
   font-size: 1.5rem;
   margin: 0;
+  transition: 0.4s;
 }
+
+/* h1:hover {
+  color: var(--c-magenta);
+} */
 
 p {
   font-family: var(--ff-poppins);
@@ -248,14 +253,14 @@ button {
 
 .projects_wrapper {
   display: flex;
-  width: 60%;
+  width: 98%;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  row-gap: 3rem;
+  row-gap: 2rem;
 }
 
 .project_wrapper {
-  width: 45%;
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,8 +268,13 @@ button {
 
 .project_wrapper img {
   width: 100%;
-  height: 30vh;
+  height: 50vh;
   object-fit: cover;
+  transition: 0.4s;
+}
+
+.project_wrapper:hover img {
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 767px) {
