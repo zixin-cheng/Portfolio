@@ -65,6 +65,7 @@ h1 {
   padding: 0.5rem;
   border-radius: 5px;
   margin: 1.5vh;
+  margin-left: 5rem;
 }
 
 .cover_img {
@@ -88,7 +89,7 @@ h1 {
   pointer-events: none;
 }
 .project_info {
-  margin-left: 2.5rem;
+  /* margin-left: 2.5rem; */
   display: block;
 }
 

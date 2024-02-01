@@ -18,7 +18,7 @@ export default function ArchivePage(props) {
     <div>
       <NavigationBar />
       <div className={styles.content_wrapper}>
-        <h1>PROJECTS</h1>
+        {/* <h1>PROJECTS</h1> */}
         <Filter filter={PROJECT_LIST_ARCHIVE} setFilter={setFilter} active={active} setActive={setActive} />
 
         <div className={styles.projects_wrapper}>

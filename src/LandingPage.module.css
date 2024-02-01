@@ -178,6 +178,28 @@ body {
   transform: translateY(0);
 }
 
+.card {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 1.5vh;
+  margin-left: 5rem;
+}
+
+.caption {
+  font-family: var(--ff-roboto);
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--c-dark-grey);
+
+  &:hover {
+    color: var(--c-magenta);
+    transition: 0.2s;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .intro_header,
   .contact_header {
