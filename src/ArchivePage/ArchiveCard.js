@@ -20,9 +20,9 @@ export default function ArchiveCard(props) {
             left: 0,
           });
         }}
-        style={{ width: '100%' }}
+        style={{ width: '100%', height: 'auto' }}
       >
-        <div style={{ overflow: 'hidden', height: '50vh' }}>
+        <div className={styles.project_wrapper_image}>
           <img src={project.imgSrc} alt="" />
         </div>
         <h1 style={isHovering ? { color: 'var(--c-magenta)' } : { color: 'var(--c-dark-grey)' }}>{project.title}</h1>
