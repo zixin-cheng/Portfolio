@@ -1,9 +1,4 @@
-/* Import Jua and Open Sans Font Families */
-@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Mono&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Mono&family=Poppins:100&display=swap');
 
 * {
   box-sizing: border-box;
