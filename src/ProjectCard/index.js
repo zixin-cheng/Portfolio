@@ -44,7 +44,13 @@ export default function ProjectCard(props) {
             <ProjectInfo title={project.title} description={project.description} />
           </div>
         </Card>
-        <CoverImg imgSrc={project.imgSrc} isHovering={isHovering} position={[position.x, position.y]} />
+        <CoverImg
+          imgSrc={project.imgSrc}
+          timeStart={project.timeStart}
+          timeEnd={project.timeEnd}
+          isHovering={isHovering}
+          position={[position.x, position.y]}
+        />
       </Link>
     </div>
   );

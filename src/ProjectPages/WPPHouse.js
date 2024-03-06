@@ -20,7 +20,7 @@ export default function WPPHouse() {
     <div>
       <Navigationbar />
       <div className={styles.content_wrapper}>
-        <IntroStrip tags={'WEB DEV & GENERATIVE DESIGN'} title={'WPP House'} />
+        <IntroStrip tags={'WEB DEV & GENERATIVE DESIGN'} title={'WPP House @SXSW'} />
         <Paragraph
           content={`
           In collaboration, WPP is set to transform Sydney's iconic Powerhouse Museum into the vibrant WPP House during SXSW Sydney. This central hub serves as a dynamic space for exploring groundbreaking ideas and addressing current and future industry challenges. Throughout the week-long event (15-22 October), WPP House welcomes agencies and partners, fostering creative transformation and offering five days of stimulating discussions, emerging concepts, and open dialogue.

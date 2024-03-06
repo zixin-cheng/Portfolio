@@ -48,7 +48,10 @@ export default function InfoPage() {
             <h1>Clients</h1>
             <ul>
               <li>
+                <p>{'AIA'}</p>
                 <p>{'China Duty Free Group'}</p>
+                <p>{'BNP Paribas'}</p>
+                <p>{'China Minsheng Bank'}</p>
                 <p>{'CMBC'}</p>
                 <p>{'Great Eastern'}</p>
                 <p>{'Infosys'}</p>
@@ -62,6 +65,7 @@ export default function InfoPage() {
                 <p>{'Universal Music Group'}</p>
                 <p>{'Volkswagen'}</p>
                 <p>{'WPP'}</p>
+                <p>{'Wix.com'}</p>
               </li>
             </ul>
           </div>
@@ -72,10 +76,10 @@ export default function InfoPage() {
               <li>
                 <p>{'Branding'}</p>
                 <p>{'Motion Design'}</p>
-                <p>{'UI/UX'}</p>
-                <p>{'Prototyping'}</p>
                 <p>{'Front-end Web Development'}</p>
                 <p>{'Generative Design'}</p>
+                <p>{'UI/UX'}</p>
+                <p>{'Prototyping'}</p>
                 <p>{'Visual Design'}</p>
                 <p>{'Usability Testing'}</p>
               </li>
