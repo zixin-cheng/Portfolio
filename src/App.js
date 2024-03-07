@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { ScrollRestoration } from 'react-router-dom';
 
@@ -43,6 +43,7 @@ function App() {
   useEffect(() => {
     document.title = 'Jane Cheng';
   }, []);
+
   // Set the animation to play based on scroll position
   useEffect(() => {
     // We then register a callback that executes every time the user scrolls
@@ -65,9 +66,7 @@ function App() {
         <Landing />
         <Projects />
         <ContactInfo />
-
         <Scene />
-        {/* <Footer /> */}
       </div>
     </div>
   );
