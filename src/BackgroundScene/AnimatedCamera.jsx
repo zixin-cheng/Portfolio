@@ -16,6 +16,7 @@ function AnimatedCamera(props) {
         x: -15,
         y: 0,
         z: 5,
+        easing: 'easeInOutQuart',
       },
       'project'
     );
@@ -26,7 +27,9 @@ function AnimatedCamera(props) {
         x: 0,
         y: -0.8,
         z: 0,
+        easing: 'easeInOutQuart',
       },
+
       'project'
     );
 
@@ -36,6 +39,7 @@ function AnimatedCamera(props) {
         x: -4,
         y: -0.5,
         z: 0,
+        easing: 'easeInOutQuart',
       },
       'end'
     );
@@ -46,6 +50,7 @@ function AnimatedCamera(props) {
         x: 0,
         y: -1.5,
         z: 0,
+        easing: 'easeInOutQuart',
       },
       'end'
     );

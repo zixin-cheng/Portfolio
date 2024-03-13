@@ -38,6 +38,8 @@ export default function CoverImg(props) {
         className={props.isHovering ? styles.cover_img : styles.hidden_cover_img}
         style={{ left: props.position[0] + 200, top: props.position[1] }}
         ref={videoRef}
+        loop
+        playsInline
       ></video>
     </>
   );

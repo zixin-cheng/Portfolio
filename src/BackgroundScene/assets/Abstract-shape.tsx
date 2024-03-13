@@ -41,17 +41,12 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
     modelRef.current.rotation.y -= rotationSpeed;
     modelRef.current.rotation.z += rotationSpeed;
   });
+  // b48181
   const mat = (
-    <MeshTransmissionMaterial
-      resolution={64}
-      distortion={0.25}
-      color="rgb(180, 129, 129)"
-      thickness={0.5}
-      anisotropy={1}
-    />
+    <MeshTransmissionMaterial resolution={64} distortion={0.25} color="#edeff0" thickness={0.5} anisotropy={1} />
   );
-
-  const matMetal = <meshStandardMaterial color="#f7d7d2" roughness={0.1} metalness={0.925} />;
+  //  f7d7d2
+  const matMetal = <meshStandardMaterial color="#ccd5e3" roughness={0.1} metalness={0.925} />;
 
   return (
     <group ref={modelRef} {...props} dispose={null}>
@@ -79,17 +74,18 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
       <mesh geometry={nodes.Shape011.geometry} rotation={[-0.096, -0.241, 2.015]}>
         {matMetal}
       </mesh>
-
+      {/* d1b3ff */}
       <mesh geometry={nodes.Shape012.geometry} rotation={[2.037, -1.023, -0.056]}>
-        <MeshTransmissionMaterial resolution={512} distortion={0.5} color="#d1b3ff" thickness={1} anisotropy={1} />
+        <MeshTransmissionMaterial resolution={512} distortion={0.5} color="#f0e9ea" thickness={1} anisotropy={1} />
       </mesh>
 
       <mesh geometry={nodes.Shape013.geometry} rotation={[0.658, 0.98, -2.575]}>
         <meshStandardMaterial color="white" roughness={0.2} metalness={0.9} />
       </mesh>
 
+      {/* 92bfd6 */}
       <mesh geometry={nodes.Shape014.geometry} rotation={[0.247, 0.081, -2.004]}>
-        <MeshTransmissionMaterial resolution={128} distortion={0.5} color="#92bfd6" thickness={1} anisotropy={0} />
+        <MeshTransmissionMaterial resolution={128} distortion={0.5} color="#fcf5ed" thickness={1} anisotropy={0} />
       </mesh>
 
       {/* <mesh geometry={nodes.Shape014.geometry} rotation={[0.247, 0.081, -2.004]}>

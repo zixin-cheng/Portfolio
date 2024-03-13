@@ -3,35 +3,6 @@ import styles from '../ProjectPages/ProjectPage.module.css';
 
 import { Link } from 'react-router-dom';
 
-// export default function ArchiveCard(props) {
-//   const [isHovering, setIsHovering] = useState(false);
-//   const project = props.project;
-//   return (
-//     <div
-//       className={styles.project_wrapper}
-//       onMouseEnter={() => setIsHovering(true)}
-//       onMouseLeave={() => setIsHovering(false)}
-//     >
-//       <Link
-//         to={project.pgSrc}
-//         onClick={() => {
-//           window.scroll({
-//             top: 0,
-//             left: 0,
-//           });
-//         }}
-//         style={{ width: '100%', height: 'auto' }}
-//       >
-//         <div className={styles.project_wrapper_image}>
-//           <img src={project.imgSrc} alt="" />
-//           // show video here
-//         </div>
-//         <h1 style={isHovering ? { color: 'var(--c-magenta)' } : { color: 'var(--c-dark-grey)' }}>{project.title}</h1>
-//       </Link>
-//     </div>
-//   );
-// }
-
 function startPreview(video, timeStart, timeEnd) {
   video.muted = true;
   // const currentTime = timeMap['default'] || 0; // If 'default' key doesn't exist, default to 0
@@ -84,7 +55,16 @@ export default function ArchiveCard(props) {
         <div className={styles.project_wrapper_image}>
           <img src={project.imgSrc} alt="" />
           {project.vidSrc && (
-            <video ref={videoRef} src={project.vidSrc} autoPlay muted className={styles.overlay_video} loop></video>
+            <video
+              ref={videoRef}
+              src={project.vidSrc}
+              autoPlay
+              muted
+              className={styles.overlay_video}
+              loop
+              playsInline
+              controls
+            ></video>
           )}
         </div>
         <h1 style={isHovering ? { color: 'var(--c-magenta)' } : { color: 'var(--c-dark-grey)' }}>{project.title}</h1>

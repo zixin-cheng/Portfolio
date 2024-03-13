@@ -74,6 +74,7 @@ h1 {
   width: auto;
   height: 30vh;
   opacity: 1;
+  border-radius: 25px;
   /* transition: 0.1s; */
   pointer-events: none;
 }
@@ -87,6 +88,7 @@ h1 {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  border-radius: 25px;
 }
 
 .project_info {
