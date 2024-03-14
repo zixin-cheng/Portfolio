@@ -63,7 +63,6 @@ export default function ArchiveCard(props) {
               className={styles.overlay_video}
               loop
               playsInline
-              controls
             ></video>
           )}
         </div>
