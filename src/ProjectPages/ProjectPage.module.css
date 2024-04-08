@@ -365,6 +365,7 @@ button {
 
   .project_wrapper_image {
     height: 35vh;
+    border-radius: 25px;
   }
 
   .infoPage_wrapper {

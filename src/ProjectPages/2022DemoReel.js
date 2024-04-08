@@ -27,7 +27,7 @@ export default function DemoReel() {
         />
 
         <Video
-          videoSrc={require('./assets/DemoReel/2022MotionReel.mp4')}
+          videoSrc={require('./assets/DemoReel/2022MotionReel(2024).mp4')}
           orientation={'landscape'}
           caption={`2022 Demo Reel
 `}
