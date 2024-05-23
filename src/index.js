@@ -12,6 +12,7 @@ import WorldCheeseAward from './ProjectPages/WorldCheeseAward';
 import HeartsAndBones from './ProjectPages/HeartsAndBones';
 import LashInBloom from './ProjectPages/LashInBloom';
 import K5 from './ProjectPages/K5';
+import SignatureSpectrum from './ProjectPages/SignatureSpectrum';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: 'k5',
     element: <K5 />,
+  },
+  {
+    path: 'signature-spectrum',
+    element: <SignatureSpectrum />,
   },
 ]);
 

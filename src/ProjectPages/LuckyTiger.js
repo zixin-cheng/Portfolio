@@ -80,7 +80,12 @@ export default function LuckyTiger() {
             caption={'Social Media & Skin Design'}
           />
         </div>
-        <FooterNav prev={'WPP House'} prevSrc={'/wpp-house'} next={'2022 Demo Reel'} nextSrc={'/2022-demo-reel'} />
+        <FooterNav
+          prev={'WPP House'}
+          prevSrc={'/wpp-house'}
+          next={'Signature Spectrum'}
+          nextSrc={'/signature-spectrum'}
+        />
       </div>
       <Footer />
     </div>

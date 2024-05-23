@@ -12,8 +12,15 @@ export const PROJECT_LIST_ARCHIVE = [
     imgSrc: require('../assets/luckytiger_cover.jpeg'),
     vidSrc: require('../ProjectPages/assets/LuckyTiger/cny_su.mov'),
     timeStart: 1,
-    pgSrc: '/wpp-house',
     pgSrc: '/lucky-tiger',
+    category: ['UI/UX', 'Creative Dev'],
+  },
+  {
+    title: 'Signature Spectrum',
+    imgSrc: require('../assets/signature_hero.png'),
+    vidSrc: require('../ProjectPages/assets/SignatureSpectrum/signature_mainVideo.mp4'),
+    timeStart: 0,
+    pgSrc: '/signature-spectrum',
     category: ['UI/UX', 'Creative Dev'],
   },
   {

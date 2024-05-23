@@ -14,19 +14,18 @@ export const PROJECT_LIST = [
     description: 'Web Dev & Design',
   },
   {
+    title: 'Signature Spectrum',
+    imgSrc: require('../ProjectPages/assets/SignatureSpectrum/signature_mainVideo.mp4'),
+    timeStart: 0,
+    pgSrc: '/signature-spectrum',
+    description: 'Creative Coding',
+  },
+  {
     title: '2022 Demo Reel',
     imgSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
     pgSrc: '/2022-demo-reel',
     timeStart: 13,
     timeEnd: 23,
     description: 'Motion Design',
-  },
-  {
-    title: 'TapType',
-    imgSrc: require('../ProjectPages/assets/TapType/Brush.mp4'),
-    timeStart: 1,
-    timeEnd: 11,
-    pgSrc: '/taptype',
-    description: 'Creative Coding',
   },
 ];

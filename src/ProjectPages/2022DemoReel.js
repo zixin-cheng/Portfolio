@@ -47,7 +47,7 @@ export default function DemoReel() {
 `}
         />
 
-        <FooterNav prev={'Lucky Tiger'} prevSrc={'/lucky-tiger'} next={'TapType'} nextSrc={'/taptype'} />
+        <FooterNav prev={'Signagture Spectrum'} prevSrc={'/signature-spectrum'} next={'TapType'} nextSrc={'/taptype'} />
       </div>
       <Footer />
     </div>
