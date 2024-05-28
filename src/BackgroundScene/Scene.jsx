@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, Sparkles, Environment } from '@react-three/drei';
+import { PerspectiveCamera, Sparkles, Environment, Loader } from '@react-three/drei';
 import { Suspense } from 'react';
 
 import SimpleGLTFAsset from './SimpleGLTFAsset';

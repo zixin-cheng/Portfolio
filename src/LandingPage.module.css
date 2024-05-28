@@ -200,6 +200,51 @@ body {
   }
 }
 
+.loading_screen_100,
+.loading_screen_0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transition: opacity 1.5s;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-dark-grey);
+  /* background-color: #fff; */
+}
+
+.loading_screen_100 {
+  opacity: 1;
+}
+
+.loading_screen_0 {
+  opacity: 0;
+}
+
+.loading_text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* color: #312e81; */
+  color: #fff;
+  position: relative;
+}
+
+.loading_progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.loading_background_text {
+  opacity: 0.4;
+}
+
 @media only screen and (max-width: 767px) {
   .intro_header,
   .contact_header {

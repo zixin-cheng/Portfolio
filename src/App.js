@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import styles from './ProjectCard/ProjectCard.module.css';
 import './styles/global.css';
 import Scene from './BackgroundScene/Scene';
+import { LoadingScreen } from './LandingPage/LoadingScreen';
 import { CameraTimeline } from './BackgroundScene/AnimatedCamera';
 
 /**
@@ -58,8 +59,11 @@ function App() {
     };
   }, []);
 
+  const [started, setStarted] = useState(false);
+
   return (
     <div>
+      <LoadingScreen started={started} setStarted={setStarted} />
       <NavigationBar />
       <div className={styles.article_wrapper}>
         <ScrollToTop />
