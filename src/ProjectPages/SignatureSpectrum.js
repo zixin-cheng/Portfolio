@@ -49,12 +49,10 @@ export default function SignatureSpectrum() {
         />
 
         <Video
-          videoSrc={require('./assets/SignatureSpectrum/signature_mainVideo.mp4')}
+          videoSrc={require('./assets/SignatureSpectrum/SignatureSpectrum_DemoVid.mp4')}
           orientation={'landscape'}
-          caption={`Key Visual`}
+          caption={`Demo Video`}
           autoplay={'autoplay'}
-          muted={'muted'}
-          loop={'loop'}
         />
 
         <Paragraph
