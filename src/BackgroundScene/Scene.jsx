@@ -13,7 +13,7 @@ function Scene() {
       <Canvas>
         {/* Camera 🎥 */}
         <AnimatedCamera />
-        <Environment preset="dawn" resolution={32} />
+        <Environment path="/" files="assets/sunset.hdr" />
         <Sparkles count={10} size={100} color={'#aa8fdb'} scale={[20, 20, 20]}></Sparkles>
         <Sparkles count={10} size={500} color={'#b1c5e3'} scale={[20, 20, 20]}></Sparkles>
         <Sparkles count={10} size={300} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
