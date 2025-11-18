@@ -18,5 +18,5 @@ body {
 
 button.active {
   color: #fff;
-  background-color: var(--c-magenta);
+  background-color: var(--c-dark-grey);
 }

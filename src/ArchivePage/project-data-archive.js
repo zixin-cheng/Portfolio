@@ -24,7 +24,7 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['UI/UX', 'Creative Dev'],
   },
   {
-    title: '2022 Demo Reel',
+    title: 'Demo Reel',
     imgSrc: require('../assets/2022demoreel_cover.png'),
     vidSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
     timeStart: 13,

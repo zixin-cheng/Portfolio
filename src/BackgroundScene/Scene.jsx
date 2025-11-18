@@ -14,11 +14,11 @@ function Scene() {
         {/* Camera 🎥 */}
         <AnimatedCamera />
         <Environment preset="dawn" resolution={32} />
-        <Sparkles count={10} size={30} color={'#aa8fdb'} scale={[20, 20, 20]}></Sparkles>
-        <Sparkles count={10} size={50} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
-        <Sparkles count={10} size={30} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
-        <Sparkles count={10} size={50} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
-        <Sparkles count={50} size={20} color={'#ffaa75'} position={[0, 0, -20]} scale={[100, 100, 100]}></Sparkles>
+        <Sparkles count={10} size={100} color={'#aa8fdb'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={10} size={500} color={'#b1c5e3'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={10} size={300} color={'#e3b1c9'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={10} size={500} color={'#b1c5e3'} scale={[20, 20, 20]}></Sparkles>
+        <Sparkles count={50} size={200} color={'#ffaa75'} position={[0, 0, -20]} scale={[100, 100, 100]}></Sparkles>
 
         {/* Lights 💡 */}
         <SimpleLight position={[1, 0, 0]} color={'red'} />
@@ -27,7 +27,7 @@ function Scene() {
         {/* <pointLight position={[0, 0, 10]} intensity={10} /> */}
 
         {/* We can create a background color as a child element of the canvas we just have to attach it */}
-        <color args={['rgb(248, 248, 248)']} attach="background" />
+        <color args={['rgb(232, 229, 229)']} attach="background" />
 
         {/* Objects 📦 */}
         <Suspense fallback={null}>

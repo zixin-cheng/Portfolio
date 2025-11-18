@@ -20,7 +20,7 @@ function SimpleLight(props) {
       ref={mouseRef}
       position={position ? position : mouseRef.current.position}
       color={color ? color : 'blue'}
-      intensity={100}
+      intensity={1000}
     />
   );
 }

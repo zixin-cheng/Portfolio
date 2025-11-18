@@ -11,13 +11,13 @@ import styles from './ProjectPage.module.css';
 
 export default function DemoReel() {
   useEffect(() => {
-    document.title = '2022 Demo Reel — Jane Cheng';
+    document.title = 'Demo Reel — Jane Cheng';
   }, []);
   return (
     <div>
       <Navigationbar />
       <div className={styles.content_wrapper}>
-        <IntroStrip tags={'MOTION DESIGN & CREATIVE CODING'} title={'2022 Demo Reel'} />
+        <IntroStrip tags={'MOTION DESIGN & CREATIVE CODING'} title={'Demo Reel'} />
 
         <Paragraph
           header={'2D/3D Motion Design Reel'}
@@ -29,7 +29,7 @@ export default function DemoReel() {
         <Video
           videoSrc={require('./assets/DemoReel/2022MotionReel(2024).mp4')}
           orientation={'landscape'}
-          caption={`2022 Demo Reel
+          caption={`Demo Reel
 `}
         />
 

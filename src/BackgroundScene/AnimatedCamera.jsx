@@ -58,7 +58,7 @@ function AnimatedCamera(props) {
 
   return (
     <group dispose={null}>
-      <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 6, 12]} rotation={[0, 0, 0]} />
+      <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 12]} rotation={[0, 0, 0]} />
     </group>
   );
 }

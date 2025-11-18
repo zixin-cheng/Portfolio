@@ -28,7 +28,7 @@ export default function K5() {
 
         <Video videoSrc={require('./assets/K5/k-5.mp4')} orientation={'landscape'} caption={`Screen Recording`} />
 
-        <FooterNav prev={'2022 Motion Reel'} prevSrc={'/2022-demo-reel'} next={'TapType'} nextSrc={'/taptype'} />
+        <FooterNav prev={'Motion Reel'} prevSrc={'/2022-demo-reel'} next={'TapType'} nextSrc={'/taptype'} />
       </div>
       <Footer />
     </div>

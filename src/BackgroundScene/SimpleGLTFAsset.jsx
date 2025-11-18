@@ -28,7 +28,7 @@ function SimpleGLTFAsset(props) {
         scale={scale ? scale : [3, 3, 3]}
         object={gltf.scene}
       ></primitive> */}
-      <Blob scale={[3, 3, 3]} rotation={[0, 0, 0]} />
+      <Blob scale={[50, 50, 50]} rotation={[0, 0, 0]} />
     </group>
   );
 }
