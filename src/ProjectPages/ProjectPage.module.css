@@ -147,7 +147,7 @@ caption {
 .imgstrip_wrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   column-gap: 5%;
   row-gap: 4rem;
@@ -230,41 +230,37 @@ caption {
 
 button {
   appearance: none;
-  background-color: transparent;
-  border: 1px solid var(--c-dark-grey);
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: var(--c-dark-grey);
-  pointer-events: all;
-  cursor: pointer;
-  display: inline-block;
-  font-family: var(--ff-roboto);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
+  background: none;
+  border: none;
+  padding: 0;
   margin: 0;
   margin-top: 10px;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: var(--ff-roboto);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--c-dark-grey);
+  cursor: pointer;
+  text-decoration: none; /* no underline by default */
+  transition: color 200ms ease;
 }
 
-button:not(.active):hover {
-  background-color: color-mix(in srgb, var(--c-dark-grey) 20%, transparent);
-}
+/* Hover effect (optional) */
+/* button:not(.active):hover {
+  color: color-mix(in srgb, var(--c-dark-grey) 20%, black);
+} */
 
+/* Only the selected one has an underline */
 button.active {
-  color: #fff;
+  /* text-decoration: underline; */
+  font-weight: 700;
   background-color: var(--c-dark-grey);
+  /* color: var(--c-dark-grey); */
 }
 
-button.active:hover {
-  background-color: var(--c-dark-grey) !important;
-  color: white;
-}
+/* Active hover does nothing visually */
+/* button.active:hover {
+  color: var(--c-dark-grey);
+} */
 
 .projects_wrapper {
   display: flex;
@@ -284,9 +280,9 @@ button.active:hover {
 .project_wrapper_image {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 0px;
 }
 
 .project_wrapper img {

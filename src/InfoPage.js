@@ -19,11 +19,11 @@ export default function InfoPage() {
           <Image imgSrc={require('./assets/profilepic.jpg')} orientation={'portrait'} caption={''} />
           <Paragraph
             content={`
-          I'm a creative technologist based in New York, dedicated to crafting immersive experiences that seamlessly blend technology and design. While my expertise lies in motion design, I also explore a wide range of mediums, including AR and interactive web experiences. Over the course of my career, I've had the privilege of collaborating with renowned companies like Intel, Volkswagen, Infosys, Tecent, Wix.com, and more.
+          I'm a designer based in New York, dedicated to crafting immersive experiences that seamlessly blend technology and design. While my expertise lies in motion design, I also explore a wide range of mediums, including AR and interactive web experiences. Over the course of my career, I've had the privilege of collaborating with renowned companies like Intel, Volkswagen, Infosys, Tecent, Wix.com, and more.
 
           ​<br/>​<br/>
           
-          Currently, I am pursuing a master's degree at NYU's Interactive Telecommunications Program, where I delve into the realms of interactive web-based art and generative design. By pushing the boundaries of creative technology, my aim is to create innovative solutions that not only inspire but also evoke a sense of wonder. I'm driven by the belief that technology can be a powerful tool for storytelling and expression, and I'm passionate about harnessing its potential to craft meaningful experiences.
+          Currently, I'm working as a Creative Developer at SOSO, where I delve into the realms of branding and generative design. By pushing the boundaries of creative technology, my aim is to create innovative solutions that not only inspire but also evoke a sense of wonder. I'm driven by the belief that technology can be a powerful tool for storytelling and expression, and I'm passionate about harnessing its potential to craft meaningful experiences.
           
           ​<br/>​<br/>
 
@@ -35,11 +35,27 @@ export default function InfoPage() {
           <div className={styles.info_column}>
             <h1>Experience</h1>
             <ul>
-              <li>
-                <p>{'Design Bridge and Partners, Digital Designer, 2022–Present'}</p>
-                <p>{'Freelance, Designer, 2016–Present'}</p>
-                <p>{'AIA, User Acceptance Tester Intern, 2020'}</p>
-                <p>{'Wix.com, Web Design Intern at Wix Playground, 2019'}</p>
+              <li style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div>
+                  <p style={{ fontWeight: '600' }}>SOSO</p>
+                  <p>Creative Technologist, 2024–Present</p>
+                </div>
+                <div>
+                  <p style={{ fontWeight: '600' }}>Freelance</p>
+                  <p>Designer, 2016–Present</p>
+                </div>
+                <div>
+                  <p style={{ fontWeight: '600' }}>Design Bridge and Partners</p>
+                  <p>Digital Designer (Full-time & Freelance), 2022–2024</p>
+                </div>
+                <div>
+                  <p style={{ fontWeight: '600' }}>AIA</p>
+                  <p>User Tester Intern, 2020</p>
+                </div>
+                <div>
+                  <p style={{ fontWeight: '600' }}>Wix.com</p>
+                  <p>Web Design Intern at Wix Playground, 2019</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -48,14 +64,18 @@ export default function InfoPage() {
             <h1>Clients</h1>
             <ul>
               <li>
-                <p>{'AIA'}</p>
+                <p>{'Amazon'}</p>
+                <p>{'Boston Scientific'}</p>
                 <p>{'China Duty Free Group'}</p>
+                <p>{'Colaj.ai'}</p>
                 <p>{'BNP Paribas'}</p>
                 <p>{'China Minsheng Bank'}</p>
                 <p>{'CMBC'}</p>
                 <p>{'Great Eastern'}</p>
+                <p>{'Lincoln Center'}</p>
                 <p>{'Infosys'}</p>
                 <p>{'Intel'}</p>
+                <p>{'Northeastern University'}</p>
                 <p>{'PropertyGuru'}</p>
                 <p>{'Resorts World Sentosa'}</p>
                 <p>{'Singapore Science Park'}</p>
@@ -70,7 +90,7 @@ export default function InfoPage() {
             </ul>
           </div>
 
-          <div className={styles.info_column}>
+          {/* <div className={styles.info_column}>
             <h1>Skills</h1>
             <ul>
               <li>
@@ -84,7 +104,7 @@ export default function InfoPage() {
                 <p>{'Usability Testing'}</p>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

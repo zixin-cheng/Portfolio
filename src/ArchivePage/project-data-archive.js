@@ -1,11 +1,23 @@
 export const PROJECT_LIST_ARCHIVE = [
   {
+    title: 'Lincoln Center Infoscape',
+    imgSrc: require('../ProjectPages/assets/LincolnCenter/lc_logo.png'),
+    pgSrc: '/lincoln-center',
+    category: ['Branding', 'Motion Design', 'Creative Dev'],
+  },
+  {
+    title: 'Colaj.ai',
+    imgSrc: require('../ProjectPages/assets/Colaj/colaj_hero.png'),
+    pgSrc: '/colaj',
+    category: ['Branding', 'Product Design'],
+  },
+  {
     title: 'WPP House @SXSW',
     imgSrc: require('../assets/wpphouse_cover.png'),
     vidSrc: require('../ProjectPages/assets/WPPHouse/vortex.mov'),
     timeStart: 0,
     pgSrc: '/wpp-house',
-    category: ['UI/UX', 'Branding', 'Creative Dev'],
+    category: ['Web Design', 'Branding', 'Creative Dev'],
   },
   {
     title: 'Lucky Tiger',
@@ -13,7 +25,7 @@ export const PROJECT_LIST_ARCHIVE = [
     vidSrc: require('../ProjectPages/assets/LuckyTiger/cny_su.mov'),
     timeStart: 1,
     pgSrc: '/lucky-tiger',
-    category: ['UI/UX', 'Creative Dev'],
+    category: ['Web Design', 'Creative Dev'],
   },
   {
     title: 'Signature Spectrum',
@@ -21,7 +33,7 @@ export const PROJECT_LIST_ARCHIVE = [
     vidSrc: require('../ProjectPages/assets/SignatureSpectrum/signature_mainVideo.mp4'),
     timeStart: 0,
     pgSrc: '/signature-spectrum',
-    category: ['UI/UX', 'Creative Dev'],
+    category: ['Web Design', 'Creative Dev'],
   },
   {
     title: 'Demo Reel',
@@ -39,7 +51,7 @@ export const PROJECT_LIST_ARCHIVE = [
     timeStart: 7,
     timeEnd: 17,
     pgSrc: '/k5',
-    category: ['Creative Dev', 'UI/UX'],
+    category: ['Creative Dev', 'Web Design'],
   },
   {
     title: 'TapType',
@@ -62,12 +74,12 @@ export const PROJECT_LIST_ARCHIVE = [
     title: 'Hearts & Bones',
     imgSrc: require('../ProjectPages/assets/HeartsAndBones/H&B HeroImage.jpg'),
     pgSrc: '/hearts-and-bones',
-    category: ['UI/UX'],
+    category: ['Web Design'],
   },
   {
     title: 'Lash In Bloom',
     imgSrc: require('../ProjectPages/assets/LashInBloom/Lash in Bloom_TN.png'),
     pgSrc: '/lash-in-bloom',
-    category: ['Branding', 'UI/UX'],
+    category: ['Branding', 'Web Design'],
   },
 ];

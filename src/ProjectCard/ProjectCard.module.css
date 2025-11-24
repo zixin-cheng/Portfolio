@@ -12,6 +12,20 @@
   }
 }
 
+.submitButton {
+  padding: 4px 20px;
+  min-height: 40px;
+  appearance: none; /* optional: remove default button styles */
+  background-color: transparent; /* optional */
+  border: 1px solid #000; /* optional border */
+  border-radius: 4px; /* optional rounded corners */
+  cursor: pointer;
+  font-family: var(--ff-roboto); /* if you’re using a variable font */
+  font-size: 16px; /* optional font size */
+  font-weight: 600; /* optional weight */
+  text-align: center; /* center text */
+}
+
 .article_wrapper {
   position: relative;
   height: 300vh; /* Length of the interactive scroll article */

@@ -46,7 +46,7 @@ export default function ProjectCard(props) {
         </Card>
         <CoverImg
           imgSrc={project.imgSrc}
-          timeStart={project.timeStart}
+          timeStart={project.timeStart ?? 0}
           timeEnd={project.timeEnd}
           isHovering={isHovering}
           position={[position.x, position.y]}

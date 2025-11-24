@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { createBrowserRouter, RouterProvider, ScrollRestoration, Route, Link } from 'react-router-dom';
 import WPPHouse from './ProjectPages/WPPHouse';
 import LuckyTiger from './ProjectPages/LuckyTiger';
 import DemoReel from './ProjectPages/2022DemoReel';
 import TapType from './ProjectPages/TapType';
 import InfoPage from './InfoPage';
 import ProjectArchive from './ArchivePage';
-import { createBrowserRouter, RouterProvider, ScrollRestoration, Route, Link } from 'react-router-dom';
 import WorldCheeseAward from './ProjectPages/WorldCheeseAward';
 import HeartsAndBones from './ProjectPages/HeartsAndBones';
 import LashInBloom from './ProjectPages/LashInBloom';
 import K5 from './ProjectPages/K5';
 import SignatureSpectrum from './ProjectPages/SignatureSpectrum';
+import LincolnCenter from './ProjectPages/LincolnCenter';
+import Colaj from './ProjectPages/Colaj';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
   {
     path: 'signature-spectrum',
     element: <SignatureSpectrum />,
+  },
+  {
+    path: 'lincoln-center',
+    element: <LincolnCenter />,
+  },
+  {
+    path: 'colaj',
+    element: <Colaj />,
   },
 ]);
 

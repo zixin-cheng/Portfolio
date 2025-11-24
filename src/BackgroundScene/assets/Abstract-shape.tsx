@@ -46,12 +46,12 @@ export default function Blob(props: JSX.IntrinsicElements['group']) {
     <MeshTransmissionMaterial
       resolution={64}
       roughness={0}
-      distortion={0.25}
-      color="#caccce"
-      thickness={5}
+      distortion={0.75}
+      color="#24152b"
+      thickness={1}
       anisotropy={0}
-      distortionScale={0}
-      temporalDistortion={0}
+      distortionScale={0.5}
+      temporalDistortion={0.5}
     />
   );
   //  f7d7d2

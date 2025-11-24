@@ -66,7 +66,20 @@ export default function ArchiveCard(props) {
             ></video>
           )}
         </div>
-        <h1 style={isHovering ? { color: 'var(--c-magenta)' } : { color: 'var(--c-dark-grey)' }}>{project.title}</h1>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginTop: '4px',
+          }}
+        >
+          <h1 style={isHovering ? { color: 'var(--c-magenta)' } : { color: 'var(--c-dark-grey)' }}>{project.title}</h1>
+          <p style={{ color: isHovering ? 'var(--c-magenta)' : 'var(--c-dark-grey)' }}>
+            {Array.isArray(project.category) ? project.category.join(' | ') : project.category}
+          </p>
+        </div>
       </Link>
     </div>
   );
