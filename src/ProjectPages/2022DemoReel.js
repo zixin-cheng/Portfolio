@@ -47,7 +47,7 @@ export default function DemoReel() {
 `}
         />
 
-        <FooterNav prev={'Signagture Spectrum'} prevSrc={'/signature-spectrum'} next={'TapType'} nextSrc={'/taptype'} />
+        <FooterNav prev={'WPP House'} prevSrc={'/wpp-house'} next={'TapType'} nextSrc={'/taptype'} />
       </div>
       <Footer />
     </div>

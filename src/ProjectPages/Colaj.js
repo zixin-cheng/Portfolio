@@ -20,7 +20,7 @@ export default function Colaj() {
   const [pwd, setPwd] = useState('');
   const [error, setError] = useState('');
 
-  const PASSWORD = 'l'; // change this constant to set a different password
+  const PASSWORD = 'enjoy'; // change this constant to set a different password
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -163,7 +163,12 @@ export default function Colaj() {
           caption={'Student Screen Design'}
         />
 
-        <FooterNav prev={'TapType'} prevSrc={'/taptype'} next={'Hearts & Bones'} nextSrc={'/hearts-and-bones'} />
+        <FooterNav
+          prev={'Lincoln Center Infoscape'}
+          prevSrc={'/lincoln-center'}
+          next={'WPP House'}
+          nextSrc={'/wpp-house'}
+        />
       </div>
       <Footer />
     </div>

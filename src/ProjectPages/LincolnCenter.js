@@ -20,7 +20,7 @@ export default function LincolnCenter() {
   const [pwd, setPwd] = useState('');
   const [error, setError] = useState('');
 
-  const PASSWORD = 'portfolio2025'; // change this constant to set a different password
+  const PASSWORD = 'enjoy'; // change this constant to set a different password
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -227,7 +227,12 @@ export default function LincolnCenter() {
           caption={'Social Media Posts'}
         />
 
-        <FooterNav prev={'TapType'} prevSrc={'/taptype'} next={'Hearts & Bones'} nextSrc={'/hearts-and-bones'} />
+        <FooterNav
+          prev={'Dev'}
+          prevSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
+          next={'Colaj.ai'}
+          nextSrc={'/colaj'}
+        />
       </div>
       <Footer />
     </div>

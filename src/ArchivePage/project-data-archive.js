@@ -20,6 +20,15 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['Web Design', 'Branding', 'Creative Dev'],
   },
   {
+    title: 'Demo Reel',
+    imgSrc: require('../assets/2022demoreel_cover.png'),
+    vidSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
+    timeStart: 13,
+    timeEnd: 23,
+    pgSrc: '/2022-demo-reel',
+    category: ['Motion Design', 'Creative Dev'],
+  },
+  {
     title: 'Lucky Tiger',
     imgSrc: require('../assets/luckytiger_cover.jpeg'),
     vidSrc: require('../ProjectPages/assets/LuckyTiger/cny_su.mov'),
@@ -35,15 +44,7 @@ export const PROJECT_LIST_ARCHIVE = [
     pgSrc: '/signature-spectrum',
     category: ['Web Design', 'Creative Dev'],
   },
-  {
-    title: 'Demo Reel',
-    imgSrc: require('../assets/2022demoreel_cover.png'),
-    vidSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
-    timeStart: 13,
-    timeEnd: 23,
-    pgSrc: '/2022-demo-reel',
-    category: ['Motion Design', 'Creative Dev'],
-  },
+
   {
     title: 'K-5',
     imgSrc: require('../ProjectPages/assets/K5/k5_cover.png'),

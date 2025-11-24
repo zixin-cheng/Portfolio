@@ -109,12 +109,7 @@ export default function WPPHouse() {
           muted={'muted'}
           loop={'loop'}
         />
-        <FooterNav
-          prev={'Dev'}
-          prevSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
-          next={'Lucky Tiger'}
-          nextSrc={'/lucky-tiger'}
-        />
+        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Demo Reel'} nextSrc={'/2022-demo-reel'} />
       </div>
       <Footer />
     </div>
