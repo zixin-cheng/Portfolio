@@ -15,6 +15,7 @@ import K5 from './ProjectPages/K5';
 import SignatureSpectrum from './ProjectPages/SignatureSpectrum';
 import LincolnCenter from './ProjectPages/LincolnCenter';
 import Colaj from './ProjectPages/Colaj';
+import Quilt from './ProjectPages/Quilt';
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
   {
     path: 'colaj',
     element: <Colaj />,
+  },
+  {
+    path: 'quilt',
+    element: <Quilt />,
   },
 ]);
 

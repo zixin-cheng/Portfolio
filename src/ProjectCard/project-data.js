@@ -12,11 +12,11 @@ export const PROJECT_LIST = [
     description: 'Branding & Product Design',
   },
   {
-    title: 'WPP House @SXSW',
-    imgSrc: require('../ProjectPages/assets/WPPHouse/vortex.mov'),
+    title: 'Quilt',
+    imgSrc: require('../ProjectPages/assets/Quilt/animatedlogo.mp4'),
     timeStart: 0,
-    pgSrc: '/wpp-house',
-    description: 'Creative Coding & Web Design',
+    pgSrc: '/quilt',
+    description: 'Branding & Product Design',
   },
   {
     title: 'Demo Reel',

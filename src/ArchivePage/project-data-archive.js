@@ -12,6 +12,14 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['Branding', 'Product Design'],
   },
   {
+    title: 'Quilt',
+    imgSrc: require('../ProjectPages/assets/Quilt/logo.png'),
+    vidSrc: require('../ProjectPages/assets/Quilt/animatedlogo.mp4'),
+    timeStart: 0,
+    pgSrc: '/quilt',
+    category: ['Branding', 'Product Design'],
+  },
+  {
     title: 'WPP House @SXSW',
     imgSrc: require('../assets/wpphouse_cover.png'),
     vidSrc: require('../ProjectPages/assets/WPPHouse/vortex.mov'),
