@@ -151,6 +151,14 @@ export default function Colaj() {
           orientation={'landscape'}
           caption={'Instructor Screen Design'}
         />
+        <Video
+          videoSrc={require('./assets/Colaj/beacon_animation.mp4')}
+          orientation={'portrait'}
+          muted={'muted'}
+          loop={'loop'}
+          autoplay={'autoplay'}
+          caption={`Widget Animation`}
+        />
         <Paragraph
           content={`
           <b>STUDENTS</b><br/>
