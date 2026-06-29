@@ -7,6 +7,7 @@ import LuckyTiger from './ProjectPages/LuckyTiger';
 import DemoReel from './ProjectPages/DemoReel';
 import TapType from './ProjectPages/TapType';
 import InfoPage from './InfoPage';
+import Playground from './Playground';
 import ProjectArchive from './ArchivePage';
 import WorldCheeseAward from './ProjectPages/WorldCheeseAward';
 import HeartsAndBones from './ProjectPages/HeartsAndBones';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: 'info-page',
     element: <InfoPage />,
+  },
+  {
+    path: 'playground',
+    element: <Playground />,
   },
   {
     path: 'archive',

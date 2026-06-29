@@ -23,6 +23,17 @@ export default function Projects(props) {
           </div>
         </HashLink>
 
+        <HashLink to="/playground" smooth>
+          <div
+            className={styles.menu_text}
+            style={{
+              textDecoration: location.pathname === '/playground' ? 'underline' : 'none',
+            }}
+          >
+            Playground
+          </div>
+        </HashLink>
+
         <Link
           to={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
           target="_blank"
