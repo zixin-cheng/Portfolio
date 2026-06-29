@@ -1,4 +1,4 @@
-import { v2 as cloudinary } from 'cloudinary';
+const cloudinary = require('cloudinary').v2;
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -6,22 +6,28 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-export default async function handler(req, res) {
+exports.handler = async function () {
   try {
-    const { resources } = await cloudinary.search
-      .expression('folder:playground')
-      .sort_by('created_at', 'desc')
-      .max_results(100)
-      .execute();
+    const result = await cloudinary.api.resources({
+      type: 'upload',
+      resource_type: 'video',
+      prefix: 'playground/',
+      max_results: 100,
+    });
 
-    const videos = resources.map((file) => ({
-      publicId: file.public_id,
-      url: file.secure_url,
+    const videos = result.resources.map((v) => ({
+      url: v.secure_url,
+      publicId: v.public_id,
     }));
 
-    res.status(200).json(videos);
+    return {
+      statusCode: 200,
+      body: JSON.stringify(videos),
+    };
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Failed to fetch videos' });
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: err.message }),
+    };
   }
-}
+};
