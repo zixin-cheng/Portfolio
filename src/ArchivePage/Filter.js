@@ -9,7 +9,7 @@ export default function Filter({ filter, setActive, active, setFilter }) {
     }
     const filtered = filter.filter((project) => project.category.includes(active));
     setFilter(filtered);
-  }, [active]);
+  }, [filter, setFilter]);
 
   return (
     <div className={styles.filter_wrapper}>

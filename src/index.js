@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { createBrowserRouter, RouterProvider, ScrollRestoration, Route, Link } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
 import WPPHouse from './ProjectPages/WPPHouse';
 import LuckyTiger from './ProjectPages/LuckyTiger';
 import DemoReel from './ProjectPages/DemoReel';
