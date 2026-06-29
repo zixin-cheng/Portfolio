@@ -4,7 +4,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider, ScrollRestoration, Route, Link } from 'react-router-dom';
 import WPPHouse from './ProjectPages/WPPHouse';
 import LuckyTiger from './ProjectPages/LuckyTiger';
-import DemoReel from './ProjectPages/2022DemoReel';
+import DemoReel from './ProjectPages/DemoReel';
 import TapType from './ProjectPages/TapType';
 import InfoPage from './InfoPage';
 import ProjectArchive from './ArchivePage';
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <LuckyTiger />,
   },
   {
-    path: '2022-demo-reel',
+    path: 'demo-reel',
     element: <DemoReel />,
   },
   {

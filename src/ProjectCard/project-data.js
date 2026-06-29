@@ -21,7 +21,7 @@ export const PROJECT_LIST = [
   {
     title: 'Demo Reel',
     imgSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
-    pgSrc: '/2022-demo-reel',
+    pgSrc: '/demo-reel',
     timeStart: 13,
     timeEnd: 23,
     description: 'Motion Design',

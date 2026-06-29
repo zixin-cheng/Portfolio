@@ -339,6 +339,18 @@ button.active {
     max-height: 80vh;
   }
 
+  .embedded_video_wrapper {
+    height: auto;
+    max-height: 80vh;
+  }
+
+  /* .embedded_video_wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 320px;
+    border: 0;
+  } */
+
   .video_wrapper_square,
   .image_wrapper_square {
     width: 100%;

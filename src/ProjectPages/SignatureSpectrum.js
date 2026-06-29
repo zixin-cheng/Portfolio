@@ -169,7 +169,7 @@ All in all, this project aims to delve deeper into exploring the nuances of sign
             caption={'Social Media & Skin Design'}
           />
         </div> */}
-        <FooterNav prev={'Lucky Tiger'} prevSrc={'/lucky-tiger'} next={'2022 Demo Reel'} nextSrc={'/2022-demo-reel'} />
+        <FooterNav prev={'Lucky Tiger'} prevSrc={'/lucky-tiger'} next={'Demo Reel'} nextSrc={'/demo-reel'} />
       </div>
       <Footer />
     </div>

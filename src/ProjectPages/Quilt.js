@@ -30,7 +30,7 @@ export default function Quilt() {
         <Paragraph
           header={'Branding'}
           content={`
-Transforming fragmented data into unified insight, this branding system uses a tessellated pixel/digital patchwork aesthetic. This style balances precise digital geometry with a sense of handcrafted artistry to convey the meticulous "assembly" of complex patterns into actionable business intelligence.`}
+          Transforming fragmented data into unified insight, this branding system uses a tessellated pixel/digital patchwork aesthetic. This style balances precise digital geometry with a sense of handcrafted artistry to convey the meticulous "assembly" of complex patterns into actionable business intelligence.`}
         />
 
         <Video
@@ -83,7 +83,7 @@ Transforming fragmented data into unified insight, this branding system uses a t
           loop={'loop'}
         />
 
-        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Demo Reel'} nextSrc={'/2022-demo-reel'} />
+        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Demo Reel'} nextSrc={'/demo-reel'} />
       </div>
       <Footer />
     </div>

@@ -109,7 +109,7 @@ export default function WPPHouse() {
           muted={'muted'}
           loop={'loop'}
         />
-        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Demo Reel'} nextSrc={'/2022-demo-reel'} />
+        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Demo Reel'} nextSrc={'/demo-reel'} />
       </div>
       <Footer />
     </div>

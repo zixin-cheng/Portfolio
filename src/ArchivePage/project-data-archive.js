@@ -33,7 +33,7 @@ export const PROJECT_LIST_ARCHIVE = [
     vidSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
     timeStart: 13,
     timeEnd: 23,
-    pgSrc: '/2022-demo-reel',
+    pgSrc: '/demo-reel',
     category: ['Motion Design', 'Creative Dev'],
   },
   {
