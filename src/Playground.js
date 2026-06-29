@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import Navigationbar from './components/NavigationBar';
-import Image from './ProjectPages/components/Image';
-import Paragraph from './ProjectPages/components/Paragraph';
 import Footer from './components/Footer';
 
 import styles from './ProjectPages/ProjectPage.module.css';
@@ -17,7 +15,8 @@ export default function Playground() {
       .then((res) => res.json())
       .then((data) => {
         console.log('RAW API RESPONSE:', data);
-        setVideos(data);
+
+        setVideos(data.resources || []);
       });
   }, []);
 

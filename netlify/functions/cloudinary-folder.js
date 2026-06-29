@@ -11,23 +11,22 @@ exports.handler = async function () {
     const result = await cloudinary.api.resources({
       type: 'upload',
       resource_type: 'video',
-      prefix: 'playground/',
-      max_results: 100,
+      max_results: 50,
     });
-
-    const videos = result.resources.map((v) => ({
-      url: v.secure_url,
-      publicId: v.public_id,
-    }));
 
     return {
       statusCode: 200,
-      body: JSON.stringify(videos),
+      body: JSON.stringify({
+        count: result.resources.length,
+        resources: result.resources,
+      }),
     };
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: err.message }),
+      body: JSON.stringify({
+        error: err.message,
+      }),
     };
   }
 };
