@@ -4,7 +4,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
 import WPPHouse from './ProjectPages/WPPHouse';
 import LuckyTiger from './ProjectPages/LuckyTiger';
-import DemoReel from './ProjectPages/DemoReel';
+import MotionReel from './ProjectPages/MotionReel';
 import TapType from './ProjectPages/TapType';
 import InfoPage from './InfoPage';
 import Playground from './Playground';
@@ -17,6 +17,7 @@ import SignatureSpectrum from './ProjectPages/SignatureSpectrum';
 import LincolnCenter from './ProjectPages/LincolnCenter';
 import Colaj from './ProjectPages/Colaj';
 import Quilt from './ProjectPages/Quilt';
+import Arium from './ProjectPages/Arium';
 
 const router = createBrowserRouter([
   {
@@ -44,8 +45,8 @@ const router = createBrowserRouter([
     element: <LuckyTiger />,
   },
   {
-    path: 'demo-reel',
-    element: <DemoReel />,
+    path: 'motion-reel',
+    element: <MotionReel />,
   },
   {
     path: 'taptype',
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
   {
     path: 'quilt',
     element: <Quilt />,
+  },
+  {
+    path: 'arium',
+    element: <Arium />,
   },
 ]);
 

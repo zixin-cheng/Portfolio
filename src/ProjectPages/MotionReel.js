@@ -9,15 +9,15 @@ import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
 
-export default function DemoReel() {
+export default function MotionReel() {
   useEffect(() => {
-    document.title = 'Demo Reel — Jane Cheng';
+    document.title = 'Motion Reel — Jane Cheng';
   }, []);
   return (
     <div>
       <Navigationbar />
       <div className={styles.content_wrapper}>
-        <IntroStrip tags={'MOTION DESIGN & CREATIVE CODING'} title={'Demo Reel'} />
+        <IntroStrip tags={'MOTION DESIGN & CREATIVE CODING'} title={'Motion Reel'} />
 
         <Paragraph
           header={'2D/3D Motion Design Reel'}
@@ -25,13 +25,6 @@ export default function DemoReel() {
           Please enjoy a selection of motion design projects that I've worked on this year! Most of these works are freelance projects for Superunion with clients such as Bank of America, Intel, Infosys, CDF, American Express, etc.
   `}
         />
-
-        {/* <Video
-          videoSrc={require('./assets/DemoReel/2022MotionReel(2024).mp4')}
-          orientation={'landscape'}
-          caption={`Demo Reel
-`}
-        /> */}
 
         <div style={{ width: '60%', aspectRatio: '16 / 9' }}>
           <iframe
@@ -56,7 +49,7 @@ export default function DemoReel() {
         />
 
         <Video
-          videoSrc={require('./assets/DemoReel/Generative Design.mp4')}
+          videoSrc={require('./assets/MotionReel/Generative Design.mp4')}
           orientation={'landscape'}
           caption={`Generative Design Reel
 `}

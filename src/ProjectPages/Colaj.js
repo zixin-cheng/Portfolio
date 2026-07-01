@@ -112,7 +112,7 @@ export default function Colaj() {
           orientation={'landscape'}
           muted={'muted'}
           autoplay={'autoplay'}
-          caption={`Demo Reel`}
+          caption={`Motion Reel`}
         />
         <div className={styles.imgstrip_wrapper} style={{ width: '70%' }}>
           <Image

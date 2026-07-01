@@ -83,7 +83,7 @@ export default function Quilt() {
           loop={'loop'}
         />
 
-        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Demo Reel'} nextSrc={'/demo-reel'} />
+        <FooterNav prev={'Colaj.ai'} prevSrc={'/colaj'} next={'Motion Reel'} nextSrc={'/motion-reel'} />
       </div>
       <Footer />
     </div>

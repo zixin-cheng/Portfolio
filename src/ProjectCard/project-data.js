@@ -19,9 +19,9 @@ export const PROJECT_LIST = [
     description: 'Branding & Product Design',
   },
   {
-    title: 'Demo Reel',
-    imgSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
-    pgSrc: '/demo-reel',
+    title: 'Motion Reel',
+    imgSrc: require('../ProjectPages/assets/MotionReel/2022MotionReel.mp4'),
+    pgSrc: '/motion-reel',
     timeStart: 13,
     timeEnd: 23,
     description: 'Motion Design',

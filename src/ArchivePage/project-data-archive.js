@@ -1,15 +1,26 @@
 export const PROJECT_LIST_ARCHIVE = [
   {
+    title: 'Motion Reel',
+    imgSrc: require('../ProjectPages/assets/MotionReel/cover.png'),
+    vidSrc: require('../ProjectPages/assets/MotionReel/2022MotionReel.mp4'),
+    timeStart: 13,
+    timeEnd: 23,
+    pgSrc: '/motion-reel',
+    category: ['Motion Design', 'Creative Dev'],
+  },
+  {
     title: 'Lincoln Center Infoscape',
     imgSrc: require('../ProjectPages/assets/LincolnCenter/lc_logo.png'),
     pgSrc: '/lincoln-center',
     category: ['Branding', 'Motion Design', 'Creative Dev'],
   },
   {
-    title: 'Colaj.ai',
-    imgSrc: require('../ProjectPages/assets/Colaj/colaj_hero.png'),
-    pgSrc: '/colaj',
-    category: ['Branding', 'Product Design'],
+    title: 'Arium Networks',
+    imgSrc: require('../ProjectPages/assets/Arium/hero.png'),
+    vidSrc: require('../ProjectPages/assets/Arium/animatedlogo.mp4'),
+    timeStart: 0,
+    pgSrc: '/arium',
+    category: ['Branding', 'Motion Design', 'Web Design'],
   },
   {
     title: 'Quilt',
@@ -28,21 +39,18 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['Web Design', 'Branding', 'Creative Dev'],
   },
   {
-    title: 'Demo Reel',
-    imgSrc: require('../assets/2022demoreel_cover.png'),
-    vidSrc: require('../ProjectPages/assets/DemoReel/2022MotionReel.mp4'),
-    timeStart: 13,
-    timeEnd: 23,
-    pgSrc: '/demo-reel',
-    category: ['Motion Design', 'Creative Dev'],
-  },
-  {
     title: 'Lucky Tiger',
     imgSrc: require('../assets/luckytiger_cover.jpeg'),
     vidSrc: require('../ProjectPages/assets/LuckyTiger/cny_su.mov'),
     timeStart: 1,
     pgSrc: '/lucky-tiger',
     category: ['Web Design', 'Creative Dev'],
+  },
+  {
+    title: 'Colaj.ai',
+    imgSrc: require('../ProjectPages/assets/Colaj/colaj_hero.png'),
+    pgSrc: '/colaj',
+    category: ['Branding', 'Product Design'],
   },
   {
     title: 'Signature Spectrum',
