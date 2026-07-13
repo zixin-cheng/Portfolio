@@ -41,7 +41,40 @@ export default function Quilt() {
           muted={'muted'}
           loop={'loop'}
         />
-        <Image imgSrc={require('./assets/Quilt/billboard.png')} orientation={'landscape'} caption={'Poster Design'} />
+        <div className={styles.imgstrip_wrapper} style={{ width: '90%' }}>
+          <Image
+            imgSrc={require('./assets/Quilt/insstory.png')}
+            orientation={'landscape'}
+            caption={'Social Media Visuals'}
+          />
+
+          <Video
+            videoSrc={require('./assets/Quilt/blockanimation.mp4')}
+            orientation={'landscape'}
+            caption={`Block Animation`}
+            autoplay={'autoplay'}
+            muted={'muted'}
+            loop={'loop'}
+          />
+        </div>
+        <div className={styles.imgstrip_wrapper} style={{ width: '90%' }}>
+          <Video
+            videoSrc={require('./assets/Quilt/3dstats.mp4')}
+            orientation={'landscape'}
+            caption={`3D Stats Animation`}
+            autoplay={'autoplay'}
+            muted={'muted'}
+            loop={'loop'}
+          />
+          <Video
+            videoSrc={require('./assets/Quilt/3dpaper.mp4')}
+            orientation={'landscape'}
+            caption={`3D Stats Animation`}
+            autoplay={'autoplay'}
+            muted={'muted'}
+            loop={'loop'}
+          />
+        </div>
 
         <Paragraph
           header={'UI Design'}
@@ -50,14 +83,14 @@ export default function Quilt() {
         `}
         />
         <Image imgSrc={require('./assets/Quilt/landingpage.png')} orientation={'landscape'} caption={'Landing Page'} />
-        <Image
+        {/* <Image
           imgSrc={require('./assets/Quilt/dashboard_mockup3.png')}
           orientation={'landscape'}
           caption={'Landing Page'}
-        />
+        /> */}
         <div className={styles.imgstrip_wrapper} style={{ width: '90%' }}>
           <Video
-            videoSrc={require('./assets/Quilt/piechart.mp4')}
+            videoSrc={require('./assets/Quilt/piechart.mov')}
             orientation={'portrait'}
             caption={`Pie Chart Animation`}
             autoplay={'autoplay'}
