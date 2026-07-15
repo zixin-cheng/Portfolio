@@ -7,19 +7,24 @@ import ImageHero from './components/ImageHero';
 import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
+import InlineVideo from './components/InlineVideo';
+import InlineImage from './components/InlineImage';
 import FooterNav from './components/FooterNav';
 import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
+import useEqualizeImgstripHeights from '../hooks/useEqualizeImgstripHeights';
 
 export default function TapType() {
   useEffect(() => {
     document.title = 'TapType — Jane Cheng';
   }, []);
+  useEqualizeImgstripHeights('.' + styles.imgstrip_wrapper.replace(/\s+/g, '.'));
+
   return (
     <div>
       <Navigationbar />
-      <div className={styles.content_wrapper}>
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
         <IntroStrip tags={'CREATIVE CODING'} title={'TapType'} />
 
         <Paragraph
@@ -42,6 +47,7 @@ export default function TapType() {
           videoSrc={require('./assets/TapType/Barbed.mp4')}
           orientation={'landscape'}
           caption={`Barbed Demo Video`}
+          controls={'controls'}
         />
 
         <Paragraph
@@ -53,21 +59,41 @@ export default function TapType() {
           This tool is currently still in development. Check out the demos below.`}
         />
         <div className={styles.imgstrip_wrapper}>
-          <Video videoSrc={require('./assets/TapType/月.mov')} orientation={'square'} caption={`月`} loop={'loop'} />
+          <Video
+            videoSrc={require('./assets/TapType/月.mov')}
+            orientation={'square'}
+            caption={`月`}
+            loop={'loop'}
+            autoplay={'autoplay'}
+          />
           <Video
             videoSrc={require('./assets/TapType/海市蜃楼.mov')}
             orientation={'square'}
             caption={`海市蜃楼`}
             loop={'loop'}
+            autoplay={'autoplay'}
           />
-          <Video videoSrc={require('./assets/TapType/SP.mov')} orientation={'square'} caption={`SP`} loop={'loop'} />
+          <Video
+            videoSrc={require('./assets/TapType/SP.mov')}
+            orientation={'square'}
+            caption={`SP`}
+            loop={'loop'}
+            autoplay={'autoplay'}
+          />
           <Video
             videoSrc={require('./assets/TapType/tomato.mov')}
             orientation={'square'}
             caption={`TOMATO`}
             loop={'loop'}
+            autoplay={'autoplay'}
           />
-          <Video videoSrc={require('./assets/TapType/EGG.mp4')} orientation={'square'} caption={`EGG`} loop={'loop'} />
+          <Video
+            videoSrc={require('./assets/TapType/EGG.mp4')}
+            orientation={'square'}
+            caption={`EGG`}
+            loop={'loop'}
+            autoplay={'autoplay'}
+          />
         </div>
 
         <Paragraph
@@ -79,12 +105,26 @@ export default function TapType() {
           This tool is currently still in development. Check out the demos below.`}
         />
         <div className={styles.imgstrip_wrapper}>
-          <Video videoSrc={require('./assets/TapType/Brush.mp4')} orientation={'square'} caption={`Brush`} />
-          <Video videoSrc={require('./assets/TapType/笔画.mp4')} orientation={'square'} caption={`笔画`} />
+          <Video
+            videoSrc={require('./assets/TapType/Brush.mp4')}
+            orientation={'square'}
+            caption={`Brush`}
+            autoplay={'autoplay'}
+            loop={'loop'}
+          />
+          <Video
+            videoSrc={require('./assets/TapType/笔画.mp4')}
+            orientation={'square'}
+            caption={`笔画`}
+            autoplay={'autoplay'}
+            loop={'loop'}
+          />
           <Video
             videoSrc={require('./assets/TapType/iPad Brush.mp4')}
             orientation={'portrait'}
             caption={`Ipad Brush`}
+            autoplay={'autoplay'}
+            loop={'loop'}
           />
         </div>
         <FooterNav prev={'K-5'} prevSrc={'/k5'} next={'World Cheese Award'} nextSrc={'/world-cheese-award'} />

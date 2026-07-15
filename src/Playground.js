@@ -23,10 +23,12 @@ export default function Playground() {
   return (
     <div>
       <Navigationbar />
-      <div className={styles.content_wrapper}>
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
         <main
           style={{
-            maxWidth: '80%',
+            maxWidth: '100%',
+            paddingLeft: '20px',
+            paddingRight: '20px',
             margin: '0 auto',
             columns: '320px',
             columnGap: 32,

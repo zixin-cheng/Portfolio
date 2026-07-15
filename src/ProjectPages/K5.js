@@ -13,10 +13,11 @@ export default function K5() {
   useEffect(() => {
     document.title = 'K-5 — Jane Cheng';
   }, []);
+
   return (
     <div>
       <Navigationbar />
-      <div className={styles.content_wrapper}>
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
         <IntroStrip tags={'WEB DEV'} title={'K-5'} />
 
         <Paragraph
@@ -26,7 +27,13 @@ export default function K5() {
           Explore the documentation page <a href="https://www.notion.so/janecheng/K-5-b5a9634fea604c2ea77eea094ec05a0d?pvs=4" target="_blank" rel="noopener noreferrer">here</a>.`}
         />
 
-        <Video videoSrc={require('./assets/K5/k-5.mp4')} orientation={'landscape'} caption={`Screen Recording`} />
+        <Video
+          videoSrc={require('./assets/K5/k-5.mp4')}
+          orientation={'landscape'}
+          caption={`Screen Recording`}
+          controls={'controls'}
+          autoplay={'autoplay'}
+        />
 
         <FooterNav prev={'Motion Reel'} prevSrc={'/motion-reel'} next={'TapType'} nextSrc={'/taptype'} />
       </div>

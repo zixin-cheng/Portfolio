@@ -7,10 +7,13 @@ import ImageHero from './components/ImageHero';
 import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
+import InlineVideo from './components/InlineVideo';
+import InlineImage from './components/InlineImage';
 import FooterNav from './components/FooterNav';
 import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
+import useEqualizeImgstripHeights from '../hooks/useEqualizeImgstripHeights';
 
 export default function Colaj() {
   useEffect(() => {
@@ -19,6 +22,8 @@ export default function Colaj() {
   const [unlocked, setUnlocked] = useState(false);
   const [pwd, setPwd] = useState('');
   const [error, setError] = useState('');
+
+  useEqualizeImgstripHeights('.' + styles.imgstrip_wrapper.replace(/\s+/g, '.'), unlocked);
 
   const PASSWORD = 'enjoy'; // change this constant to set a different password
 
@@ -90,22 +95,26 @@ export default function Colaj() {
   return (
     <div>
       <Navigationbar />
-      <div className={styles.content_wrapper}>
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
         <IntroStrip tags={'BRANDING & PRODUCT DESIGN'} title={'Colaj.ai'} />
         <Paragraph
           content={`
           Colaj is an AI powered tool to enable active learning by creating a more engaging classroom environment with built-in cues and real-time feedback loops on comprehension, making it easier for instructors to meet students where they are.`}
         />
-        <ImageHero imgSrc={require('./assets/Colaj/colaj_hero.png')} />
-        <InfoStrip
-          roles={['Brand Designer', 'Product Designer']}
-          teams={['John Rothenberg', 'Eric Gunther']}
-          deliverables={['Brand Design', 'Product Design']}
-        />
-        <Paragraph
-          header={'Brand Identity'}
-          content={`The Colaj brand identity is built around creativity, connection, and engagement—reflecting its mission to make learning more interactive and responsive. The logo and visual system embody the platform’s real-time feedback loops, intuitive collaboration, and seamless instructor–student connection, positioning Colaj as a leader in active, AI-powered learning.`}
-        />
+      </div>
+      <ImageHero imgSrc={require('./assets/Colaj/colaj_hero.png')} />
+      <div className={`${styles.content_wrapper} ${styles.bottom}`}>
+        <div className={styles.intro_p_wrapper}>
+          <InfoStrip
+            roles={['Brand Designer', 'Product Designer']}
+            teams={['John Rothenberg', 'Eric Gunther']}
+            deliverables={['Brand Design', 'Product Design']}
+          />
+          <Paragraph
+            header={'Brand Identity'}
+            content={`The Colaj brand identity is built around creativity, connection, and engagement—reflecting its mission to make learning more interactive and responsive. The logo and visual system embody the platform’s real-time feedback loops, intuitive collaboration, and seamless instructor–student connection, positioning Colaj as a leader in active, AI-powered learning.`}
+          />
+        </div>
         <Image imgSrc={require('./assets/Colaj/logos.png')} orientation={'landscape'} caption={'Logo'} />
         <Video
           videoSrc={require('./assets/Colaj/colaj_reel.mp4')}
@@ -114,13 +123,13 @@ export default function Colaj() {
           autoplay={'autoplay'}
           caption={`Motion Reel`}
         />
-        <div className={styles.imgstrip_wrapper} style={{ width: '70%' }}>
-          <Image
+        <div className={styles.imgstrip_wrapper}>
+          <InlineImage
             imgSrc={require('./assets/Colaj/businesscard.png')}
             orientation={'landscape'}
             caption={'Business Card'}
           />
-          <Image imgSrc={require('./assets/Colaj/tote.png')} orientation={'landscape'} caption={'Tote Bag'} />
+          <InlineImage imgSrc={require('./assets/Colaj/tote.png')} orientation={'landscape'} caption={'Tote Bag'} />
         </div>
         <Paragraph
           header={'Product Design'}
@@ -146,19 +155,21 @@ export default function Colaj() {
           For instructors, Colaj provides two complementary interfaces: a robust desktop page with full functionality for reviewing comprehension, questions, and session tools; and a streamlined smart-board widget focused on real-time essentials—participant numbers, voice detection, join code, and alerts for new key concepts.
         `}
         />
-        <Image
-          imgSrc={require('./assets/Colaj/instructor.png')}
-          orientation={'landscape'}
-          caption={'Instructor Screen Design'}
-        />
-        <Video
-          videoSrc={require('./assets/Colaj/beacon_animation.mp4')}
-          orientation={'portrait'}
-          muted={'muted'}
-          loop={'loop'}
-          autoplay={'autoplay'}
-          caption={`Widget Animation`}
-        />
+        <div className={styles.imgstrip_wrapper}>
+          <InlineImage
+            imgSrc={require('./assets/Colaj/instructor.png')}
+            orientation={'landscape'}
+            caption={'Instructor Screen Design'}
+          />
+          <InlineVideo
+            videoSrc={require('./assets/Colaj/beacon_animation.mp4')}
+            orientation={'portrait'}
+            muted={'muted'}
+            loop={'loop'}
+            autoplay={'autoplay'}
+            caption={`Widget Animation`}
+          />
+        </div>
         <Paragraph
           content={`
           <b>STUDENTS</b><br/>

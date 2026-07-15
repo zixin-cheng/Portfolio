@@ -14,11 +14,11 @@ export default function InfoPage() {
   return (
     <div>
       <Navigationbar />
-      <div className={styles.content_wrapper}>
-        <div className={styles.infoPage_wrapper}>
-          <Image imgSrc={require('./assets/profilepic.jpg')} orientation={'portrait'} caption={''} />
-          <Paragraph
-            content={`
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
+        {/* <div className={styles.infoPage_wrapper}> */}
+        {/* <Image imgSrc={require('./assets/profilepic.jpg')} orientation={'portrait'} caption={''} /> */}
+        <Paragraph
+          content={`
           I'm a designer based in New York, dedicated to crafting immersive experiences that seamlessly blend technology and design. While my expertise lies in motion design, I also explore a wide range of mediums, including AR and interactive web experiences. Over the course of my career, I've had the privilege of collaborating with renowned companies like Intel, Volkswagen, Infosys, Tecent, Wix.com, and more.
 
           ​<br/>​<br/>
@@ -29,8 +29,8 @@ export default function InfoPage() {
 
           <a href="https://drive.google.com/file/d/1rc_fPOzaupAJ2Ocr4vcIuLvgSZM99OX7/view?usp=sharing" target="_blank" rel="noopener noreferrer">Full Resume</a>
           `}
-          />
-        </div>
+        />
+        {/* </div> */}
         <div className={styles.info_wrapper}>
           <div className={styles.info_column}>
             <h1>Experience</h1>

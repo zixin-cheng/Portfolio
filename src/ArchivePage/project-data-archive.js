@@ -47,6 +47,14 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['Web Design', 'Creative Dev'],
   },
   {
+    title: 'World Cheese Award',
+    imgSrc: require('../ProjectPages/assets/WorldCheeseAward/worldcheeseaward_hero.png'),
+    vidSrc: require('../ProjectPages/assets/WorldCheeseAward/LOGO.mp4'),
+    timeStart: 0,
+    pgSrc: '/world-cheese-award',
+    category: ['Branding', 'Motion Design'],
+  },
+  {
     title: 'Colaj.ai',
     imgSrc: require('../ProjectPages/assets/Colaj/colaj_hero.png'),
     pgSrc: '/colaj',
@@ -79,24 +87,17 @@ export const PROJECT_LIST_ARCHIVE = [
     pgSrc: '/taptype',
     category: ['Creative Dev'],
   },
-  {
-    title: 'World Cheese Award',
-    imgSrc: require('../ProjectPages/assets/WorldCheeseAward/worldcheeseaward_hero.png'),
-    vidSrc: require('../ProjectPages/assets/WorldCheeseAward/LOGO.mp4'),
-    timeStart: 0,
-    pgSrc: '/world-cheese-award',
-    category: ['Branding', 'Motion Design'],
-  },
-  {
-    title: 'Hearts & Bones',
-    imgSrc: require('../ProjectPages/assets/HeartsAndBones/H&B HeroImage.jpg'),
-    pgSrc: '/hearts-and-bones',
-    category: ['Web Design'],
-  },
-  {
-    title: 'Lash In Bloom',
-    imgSrc: require('../ProjectPages/assets/LashInBloom/Lash in Bloom_TN.png'),
-    pgSrc: '/lash-in-bloom',
-    category: ['Branding', 'Web Design'],
-  },
+
+  // {
+  //   title: 'Hearts & Bones',
+  //   imgSrc: require('../ProjectPages/assets/HeartsAndBones/H&B HeroImage.jpg'),
+  //   pgSrc: '/hearts-and-bones',
+  //   category: ['Web Design'],
+  // },
+  // {
+  //   title: 'Lash In Bloom',
+  //   imgSrc: require('../ProjectPages/assets/LashInBloom/Lash in Bloom_TN.png'),
+  //   pgSrc: '/lash-in-bloom',
+  //   category: ['Branding', 'Web Design'],
+  // },
 ];

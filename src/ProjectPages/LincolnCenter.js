@@ -7,10 +7,13 @@ import ImageHero from './components/ImageHero';
 import InfoStrip from './components/InfoStrip';
 import Video from './components/Video';
 import Image from './components/Image';
+import InlineImage from './components/InlineImage';
+import InlineVideo from './components/InlineVideo';
 import FooterNav from './components/FooterNav';
 import Footer from '../components/Footer';
 
 import styles from './ProjectPage.module.css';
+import useEqualizeImgstripHeights from '../hooks/useEqualizeImgstripHeights';
 
 export default function LincolnCenter() {
   useEffect(() => {
@@ -20,6 +23,7 @@ export default function LincolnCenter() {
   const [pwd, setPwd] = useState('');
   const [error, setError] = useState('');
 
+  useEqualizeImgstripHeights('.' + styles.imgstrip_wrapper.replace(/\s+/g, '.'), unlocked);
   const PASSWORD = 'enjoy'; // change this constant to set a different password
 
   const handleSubmit = (e) => {
@@ -90,29 +94,33 @@ export default function LincolnCenter() {
   return (
     <div>
       <Navigationbar />
-      <div className={styles.content_wrapper}>
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
         <IntroStrip tags={'BRANDING & MOTION DESIGN'} title={'Lincoln Center Infoscape'} />
         <Paragraph
           content={`
           The Lincoln Center Infoscape transforms the campus into a network of digital canvases that amplify the institution’s artistic excellence, turning everyday moments into extraordinary encounters with performance. Its unified yet flexible infrastructure enriches visitor journeys, empowers creators, and seamlessly connects people to the vibrant heart of the arts.`}
         />
-        <ImageHero imgSrc={require('./assets/LincolnCenter/lc_hero.png')} />
-        <InfoStrip
-          roles={['Motion Designer', 'Developer']}
-          teams={['Aya Abdallah', 'Yaxuan Liu', 'Janet Chan (WSDIA)', 'Jonathan Jackson (WSDIA)']}
-          deliverables={['Brand System', 'Motion System', 'Generative Design']}
-        />
-        <Paragraph
-          header={'Concept Direction'}
-          content={`
+      </div>
+      <ImageHero imgSrc={require('./assets/LincolnCenter/lc_hero.png')} />
+      <div className={`${styles.content_wrapper} ${styles.bottom}`}>
+        <div className={styles.intro_p_wrapper}>
+          <InfoStrip
+            roles={['Motion Designer', 'Developer']}
+            teams={['Aya Abdallah', 'Yaxuan Liu', 'Janet Chan (WSDIA)', 'Jonathan Jackson (WSDIA)']}
+            deliverables={['Brand System', 'Motion System', 'Generative Design']}
+          />
+          <Paragraph
+            header={'Concept Direction'}
+            content={`
           The Infoscape concept embodies a dual nature: multifaceted in its capabilities while singularly illuminating Lincoln Center as the preeminent cultural hub. Refining a complex system into a dynamic stage.
             `}
-        />
-        <Image
+          />
+        </div>
+        {/* <Image
           imgSrc={require('./assets/LincolnCenter/screensystems.png')}
           orientation={'landscape'}
           caption={'Layout System'}
-        />
+        /> */}
 
         <Paragraph
           header={'Blades'}
@@ -120,30 +128,25 @@ export default function LincolnCenter() {
           The 13 blades form a city-block-scale digital canvas, using bold, rhythmic motion to capture attention from a distance while revealing denser information up close. Designed for quick, transitional audiences, the system prioritizes reusable marketing assets, consistent QR functionality, minimal Lincoln Center branding, and persistent spatial cues—while avoiding detailed wayfinding.
         `}
         />
-        <Image
-          imgSrc={require('./assets/LincolnCenter/blades_mockup.png')}
-          orientation={'landscape'}
-          caption={'Blades Design'}
-        />
-        <Paragraph
+        {/* <Paragraph
           content={`
           <b>DAILY LOOP</b><br/>
           The daily loop privileges constituent promotional content, providing multiple opportunities a day for each constituent to have an immersive wow moment across all the blades.
           It alternates between higher density configurations and block long gestures.
           It periodically brings in Lincoln Center Umbrella content to maintain cohesion of all the constituents into a single Lincoln Center organization and campus.
         `}
-        />
+        /> */}
         <Video
           videoSrc={require('./assets/LincolnCenter/blades_motion_short.mp4')}
           orientation={'landscape'}
           autoplay={'autoplay'}
           caption={`Daily Loop Sample Clip (2x speed)`}
         />
-        <Paragraph
+        {/* <Paragraph
           content={`
           A dynamic preview software is also developed to preview the compositions and sequences in motion, standing and moving through real locations on campus.
         `}
-        />
+        /> */}
         <Video
           videoSrc={require('./assets/LincolnCenter/prototypedemo.mp4')}
           orientation={'landscape'}
@@ -168,42 +171,51 @@ export default function LincolnCenter() {
           This cinematic, wide-screen display is designed for spacious layouts and large, legible type, integrating animation and film content to boost engagement. The canvas supports reusable marketing assets through flexible break-ups, while maintaining standardized QR code placement and functionality.
         `}
         />
-        <Image
-          imgSrc={require('./assets/LincolnCenter/atrium_mockup.png')}
-          orientation={'landscape'}
-          caption={'Atrium Wall Design'}
-        />
-        <Paragraph
+        <div className={styles.imgstrip_wrapper}>
+          {/* <InlineImage
+            imgSrc={require('./assets/LincolnCenter/blades_mockup.png')}
+            orientation={'landscape'}
+            caption={'Blades Design'}
+          /> */}
+          <InlineVideo
+            videoSrc={require('./assets/LincolnCenter/atrium_motion_short.mp4')}
+            orientation={'landscape'}
+            caption={`Daily Loop Sample Clip (2x speed)`}
+            autoplay={'autoplay'}
+          />
+          <InlineImage
+            imgSrc={require('./assets/LincolnCenter/atrium_mockup.png')}
+            orientation={'landscape'}
+            caption={'Atrium Wall Design'}
+          />
+        </div>
+        {/* <Paragraph
           content={`
           <b>DAILY LOOP</b><br/>
           The daily loop in the atrium brings equity to the share of voice across constituents, giving slightly more play for atrium related promotions.
           Similar to the blades, it periodically brings in Lincoln Center Umbrella content to maintain cohesion of all the constituents into a single Lincoln Center organization and campus.
         `}
-        />
-        <Video
-          videoSrc={require('./assets/LincolnCenter/atrium_motion_short.mp4')}
-          orientation={'landscape'}
-          caption={`Daily Loop Sample Clip (2x speed)`}
-          autoplay={'autoplay'}
-        />
+        /> */}
+
         <Paragraph
           header={'Other Screens'}
           content={`
           This cinematic, wide-screen display is designed for spacious layouts and large, legible type, integrating animation and film content to boost engagement. The canvas supports reusable marketing assets through flexible break-ups, while maintaining standardized QR code placement and functionality.
         `}
         />
-        <Image
-          imgSrc={require('./assets/LincolnCenter/film_entry_mockup.png')}
-          orientation={'landscape'}
-          caption={'Elinor Bunin Munroe Film Center (Movie Schedule)'}
-        />
-        <div className={styles.imgstrip_wrapper} style={{ width: '60%' }}>
-          <Image
+
+        <div className={styles.imgstrip_wrapper}>
+          <InlineImage
+            imgSrc={require('./assets/LincolnCenter/film_entry_mockup.png')}
+            orientation={'landscape'}
+            caption={'Elinor Bunin Munroe Film Center (Movie Schedule)'}
+          />
+          <InlineImage
             imgSrc={require('./assets/LincolnCenter/atrium_entry_mockup.png')}
             orientation={'landscape'}
             caption={'David Rubenstein Atrium'}
           />
-          <Image
+          <InlineImage
             imgSrc={require('./assets/LincolnCenter/hall_entry_mockup.png')}
             orientation={'landscape'}
             caption={'Alice Tully Hall Entry (Currently On)'}
@@ -216,17 +228,18 @@ export default function LincolnCenter() {
             The same flexible design system powers both informational materials and marketing content, from print materials to social media. Creating a unified, recognizable visual identity across all communications.
             `}
         />
-        <Image
-          imgSrc={require('./assets/LincolnCenter/brochure.png')}
-          orientation={'landscape'}
-          caption={'Informational Brochures'}
-        />
-        <Image
-          imgSrc={require('./assets/LincolnCenter/instagram_mockup.png')}
-          orientation={'landscape'}
-          caption={'Social Media Posts'}
-        />
-
+        <div className={styles.imgstrip_wrapper}>
+          <InlineImage
+            imgSrc={require('./assets/LincolnCenter/brochure.png')}
+            orientation={'landscape'}
+            caption={'Informational Brochures'}
+          />
+          <InlineImage
+            imgSrc={require('./assets/LincolnCenter/instagram_mockup.png')}
+            orientation={'landscape'}
+            caption={'Social Media Posts'}
+          />
+        </div>
         <FooterNav
           prev={'Dev'}
           prevSrc={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}

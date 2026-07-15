@@ -17,10 +17,18 @@ export default function ArchivePage(props) {
   return (
     <div>
       <NavigationBar />
-      <div className={styles.content_wrapper}>
+      <div className={`${styles.content_wrapper} ${styles.top}`}>
         {/* <h1>PROJECTS</h1> */}
         {/* <Filter filter={PROJECT_LIST_ARCHIVE} setFilter={setFilter} active={active} setActive={setActive} /> */}
-        <h1>ALL PROJECTS</h1>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <h1>ALL PROJECTS</h1>
+        </div>
 
         <div className={styles.projects_wrapper}>
           {filter.map((project, index) => (
