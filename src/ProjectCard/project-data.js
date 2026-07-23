@@ -6,10 +6,10 @@ export const PROJECT_LIST = [
     description: 'Branding & Motion Design',
   },
   {
-    title: 'Colaj.ai',
-    imgSrc: require('../ProjectPages/assets/Colaj/colaj_hero.png'),
-    pgSrc: '/colaj',
-    description: 'Branding & Product Design',
+    title: 'C7 Nova',
+    imgSrc: require('../ProjectPages/assets/C7/speakers.mp4'),
+    pgSrc: '/c7',
+    description: 'Motion & 3D Design',
   },
   {
     title: 'Quilt',

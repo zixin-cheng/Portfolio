@@ -36,8 +36,9 @@ export default function WPPHouse() {
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
           <InfoStrip
-            roles={['Creative Developer', 'Visual Designer']}
-            teams={['Jessica Tan', 'Paola Demichelis']}
+            roles={['Front-End Development', 'Visual Design']}
+            // teams={['Jessica Tan', 'Paola Demichelis']}
+            tools={['three.js', 'p5.js']}
             deliverables={['Event Website', 'Interactive Tools & Experiences']}
           />
 

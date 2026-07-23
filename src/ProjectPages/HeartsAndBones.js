@@ -27,7 +27,7 @@ export default function HeartsAndBones() {
         />
         <ImageHero imgSrc={require('./assets/HeartsAndBones/H&B HeroImage.jpg')} />
         <InfoStrip
-          teams={['Ari Kushmirak']}
+          // teams={['Ari Kushmirak']}
           roles={['UI/UX Design', 'User Reasearch', 'Website Build (Wix Editor)']}
           deliverables={['Desktop Website', 'Mobile Website']}
         />

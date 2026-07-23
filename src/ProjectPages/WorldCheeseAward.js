@@ -35,8 +35,8 @@ export default function WorldCheeseAward() {
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
           <InfoStrip
-            roles={['Designer']}
-            teams={[]}
+            roles={['Motion Design', 'Visual Design']}
+            tools={['After Effects', 'Illustrator']}
             deliverables={['Logo', 'Key Visuals', 'Posters', 'Event Reel', 'Event Visuals']}
           />
           <Paragraph

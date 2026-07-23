@@ -17,6 +17,7 @@ import SignatureSpectrum from './ProjectPages/SignatureSpectrum';
 import LincolnCenter from './ProjectPages/LincolnCenter';
 import Colaj from './ProjectPages/Colaj';
 import Quilt from './ProjectPages/Quilt';
+import C7 from './ProjectPages/C7';
 import Arium from './ProjectPages/Arium';
 
 const router = createBrowserRouter([
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
   {
     path: 'quilt',
     element: <Quilt />,
+  },
+  {
+    path: 'c7',
+    element: <C7 />,
   },
   {
     path: 'arium',

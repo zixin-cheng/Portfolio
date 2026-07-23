@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import IntroStrip from './components/IntroStrip';
+import InfoStrip from './components/InfoStrip';
 import Navigationbar from '../components/NavigationBar';
 import Paragraph from './components/Paragraph';
 import Video from './components/Video';
@@ -20,12 +21,19 @@ export default function K5() {
       <div className={`${styles.content_wrapper} ${styles.top}`}>
         <IntroStrip tags={'WEB DEV'} title={'K-5'} />
 
-        <Paragraph
-          content={`
+        <div className={styles.intro_p_wrapper}>
+          <InfoStrip
+            roles={['Visual Design', 'Front-End Development']}
+            tools={['three.js']}
+            deliverables={['Website']}
+          />
+          <Paragraph
+            content={`
           This visual journalism project illuminates the deployment of the new K-5 robot by the NYPD in the New York Times Square subway station. Utilizing a scroll interaction combined with 3D graphics on a webpage, the project delves into the implications surrounding this robotic presence. As the lead creative developer, my responsibility is to ensure that the visuals harmonize with the article content and offer a seamless interactive experience as users scroll through the webpage.
           <br><br>
           Explore the documentation page <a href="https://www.notion.so/janecheng/K-5-b5a9634fea604c2ea77eea094ec05a0d?pvs=4" target="_blank" rel="noopener noreferrer">here</a>.`}
-        />
+          />
+        </div>
 
         <Video
           videoSrc={require('./assets/K5/k-5.mp4')}

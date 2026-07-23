@@ -106,8 +106,8 @@ export default function Colaj() {
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
           <InfoStrip
-            roles={['Brand Designer', 'Product Designer']}
-            teams={['John Rothenberg', 'Eric Gunther']}
+            roles={['Visual Design', 'Motion Design', 'Product Design']}
+            // teams={['John Rothenberg', 'Eric Gunther']}
             deliverables={['Brand Design', 'Product Design']}
           />
           <Paragraph

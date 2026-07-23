@@ -32,8 +32,7 @@ export default function LashInBloom() {
         />
         <ImageHero imgSrc={require('./assets/LashInBloom/lashinbloom_hero.jpg')} />
         <InfoStrip
-          roles={['Lead Designer']}
-          teams={['Chloe Low', 'Mei Yin Ying']}
+          roles={['Visual Design', 'Art Direction']}
           deliverables={['Key Visual', 'Posters', 'Pamphlets', 'Social Media Assets', 'Website']}
         />
         <Paragraph

@@ -38,8 +38,9 @@ export default function LuckyTiger() {
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
           <InfoStrip
-            roles={['Frontend Development', 'Visual Designer']}
-            teams={['Jessica Tan', 'Paola Demichelis']}
+            roles={['Front-End Development', 'Visual Design']}
+            tools={['three.js']}
+            // teams={['Jessica Tan', 'Paola Demichelis']}
             deliverables={['Interactive Website']}
           />
           <Paragraph

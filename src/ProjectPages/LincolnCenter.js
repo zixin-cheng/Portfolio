@@ -105,8 +105,9 @@ export default function LincolnCenter() {
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
           <InfoStrip
-            roles={['Motion Designer', 'Developer']}
-            teams={['Aya Abdallah', 'Yaxuan Liu', 'Janet Chan (WSDIA)', 'Jonathan Jackson (WSDIA)']}
+            roles={['Motion Design', 'Visual Design', 'Front-End Development']}
+            // teams={['Aya Abdallah', 'Yaxuan Liu', 'Janet Chan (WSDIA)', 'Jonathan Jackson (WSDIA)']}
+            tools={['After Effects', 'three.js', 'AI']}
             deliverables={['Brand System', 'Motion System', 'Generative Design']}
           />
           <Paragraph
@@ -136,6 +137,12 @@ export default function LincolnCenter() {
           It periodically brings in Lincoln Center Umbrella content to maintain cohesion of all the constituents into a single Lincoln Center organization and campus.
         `}
         /> */}
+        <Video
+          videoSrc={require('./assets/LincolnCenter/teaser.mov')}
+          orientation={'landscape'}
+          autoplay={'autoplay'}
+          muted={'muted'}
+        />
         <Video
           videoSrc={require('./assets/LincolnCenter/blades_motion_short.mp4')}
           orientation={'landscape'}

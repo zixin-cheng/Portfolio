@@ -31,6 +31,14 @@ export const PROJECT_LIST_ARCHIVE = [
     category: ['Branding', 'Product Design'],
   },
   {
+    title: 'C7 Nova',
+    imgSrc: require('../ProjectPages/assets/C7/hero.png'),
+    vidSrc: require('../ProjectPages/assets/C7/speakers.mp4'),
+    timeStart: 0,
+    pgSrc: '/c7',
+    category: ['3D Design', 'Motion Design'],
+  },
+  {
     title: 'WPP House @SXSW',
     imgSrc: require('../assets/wpphouse_cover.png'),
     vidSrc: require('../ProjectPages/assets/WPPHouse/vortex.mov'),

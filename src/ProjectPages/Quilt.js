@@ -35,7 +35,11 @@ export default function Quilt() {
       <ImageHero imgSrc={require('./assets/Quilt/hero.png')} />
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
-          <InfoStrip roles={['Designer']} teams={[]} deliverables={['Brand System', 'UI System']} />
+          <InfoStrip
+            roles={['Visual Design']}
+            tools={['After Effects', 'Gen AI', 'Figma']}
+            deliverables={['Brand System', 'UI System']}
+          />
           <Paragraph
             // header={'Branding'}
             content={`

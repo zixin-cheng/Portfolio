@@ -35,8 +35,9 @@ export default function Arium() {
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
         <div className={styles.intro_p_wrapper}>
           <InfoStrip
-            roles={['MotionDesigner']}
-            teams={['Kiu Y', 'Garrett Majewski']}
+            roles={['Motion Design', 'Visual Design']}
+            tools={['After Effects', 'Cinema 4D']}
+            // teams={['Kiu Y', 'Garrett Majewski']}
             deliverables={['Brand System', 'Website']}
           />
           <Paragraph

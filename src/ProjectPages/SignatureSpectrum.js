@@ -34,14 +34,22 @@ export default function SignatureSpectrum() {
       </div>
       <ImageHero imgSrc={require('./assets/SignatureSpectrum/signature_hero.png')} />
       <div className={`${styles.content_wrapper} ${styles.bottom}`}>
-        <Paragraph
-          content={`
+        <div className={styles.intro_p_wrapper}>
+          <InfoStrip
+            roles={['Visual Design', 'Front-End Development', 'Back-End Development']}
+            tools={['p5.js']}
+            deliverables={['Website']}
+          />
+          <Paragraph
+            content={`
           For centuries, signatures have served as a symbolic extension of our identity, appearing on contracts, artwork, and personal documents. Signatures have served as more than just a means of authentication; they are reflections of our identities, beliefs, and creativity. 
           <br/><br/>
 
           Imagine a signature evolving beyond its static form, becoming an animated representation of the individual behind it. This project imagines signatures as living organisms that evolve and change over time, like our personalities and character traits. 
           `}
-        />
+          />
+        </div>
+
         {/* <Paragraph
           content={`
           By infusing signatures with subtle animations and distinct visual styles, each signature takes on a personality and movement, mirroring the diversity and nuances of the individuals they represent. This exploration seeks to redefine how we perceive signatures, turning them into dynamic expressions of identity rather than static marks on paper. 
