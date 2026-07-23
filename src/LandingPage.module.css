@@ -241,11 +241,12 @@ body {
   }
 
   .menu_wrapper {
-    gap: 1.5rem;
+    gap: 0.8rem;
   }
 
   .menu_text {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: -0.05rem;
   }
 
   .intro_paragraph {
@@ -264,9 +265,14 @@ body {
   }
 
   .footer_wrapper {
+    justify-content: space-between;
     margin-bottom: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     gap: 2rem;
+  }
+
+  .footer_text {
+    font-size: 0.8rem;
   }
 }

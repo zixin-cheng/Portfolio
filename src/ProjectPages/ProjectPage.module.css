@@ -355,11 +355,9 @@ button.active {
 
 @media only screen and (max-width: 767px) {
   .content_wrapper {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    row-gap: 4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    row-gap: 10px;
   }
 
   .intro_wrapper,
@@ -369,8 +367,7 @@ button.active {
   .image_wrapper_landscape,
   .paragraph_wrapper,
   .footer_nav_wrapper {
-    width: 85%;
-    max-width: 85%;
+    width: 100%;
   }
 
   .video_wrapper_portrait,
@@ -400,9 +397,17 @@ button.active {
     font-size: 3rem;
   }
 
+  .info_wrapper {
+    justify-content: space-between;
+    column-gap: 10px;
+  }
+
+  .intro_p_wrapper {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
   .filter_wrapper {
-    width: 100%;
-    max-width: 100%;
     justify-content: space-between;
     column-gap: 0.2rem;
     flex-wrap: wrap;
@@ -458,6 +463,15 @@ button.active {
 
   .project_wrapper .overlay_video {
     display: none;
+  }
+
+  .content_wrapper.top {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .content_wrapper.bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
