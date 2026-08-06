@@ -12,14 +12,6 @@ export default function Projects(props) {
         <div className={styles.footer_text}>Linkedin</div>
       </Link>
 
-      <Link
-        to={'https://www.notion.so/janecheng/Jane-Cheng-s-Dev-Blog-67e529b49f4845659aff5880ecbe1db8'}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className={styles.footer_text}>Dev Blog</div>
-      </Link>
-
       <Link to={'mailto:janecheng1026@gmail.com'}>
         <div className={styles.footer_text}>Email</div>
       </Link>

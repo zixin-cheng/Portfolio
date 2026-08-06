@@ -1,92 +1,64 @@
 import { useEffect } from 'react';
 
-// Hook: equalize media heights inside each matching container
-export default function useEqualizeImgstripHeights(selector = '.imgstrip_wrapper') {
+export default function useEqualizeImgstripHeights(selector = '.imgstrip_wrapper', enabled = true) {
   useEffect(() => {
-    let raf = 0;
+    if (!enabled) return; // don't bother running while content isn't mounted
+
+    let rafId = 0;
+    const GAP = 20;
+    const MIN_H = 80;
+
+    const getRatio = (m) =>
+      m.tagName === 'IMG' ? (m.naturalWidth || 1) / (m.naturalHeight || 1) : (m.videoWidth || 1) / (m.videoHeight || 1);
 
     const waitForMedia = (el) =>
       new Promise((resolve) => {
-        if (!el) return resolve();
         if (el.tagName === 'IMG') {
           if (el.complete && el.naturalWidth) return resolve();
-          el.addEventListener('load', () => resolve(), { once: true });
+          el.addEventListener('load', resolve, { once: true });
+          el.addEventListener('error', resolve, { once: true });
         } else if (el.tagName === 'VIDEO') {
           if (el.readyState >= 1 && el.videoWidth) return resolve();
-          el.addEventListener('loadedmetadata', () => resolve(), { once: true });
+          el.addEventListener('loadedmetadata', resolve, { once: true });
+          el.addEventListener('error', resolve, { once: true });
         } else resolve();
       });
 
     const equalize = async () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(async () => {
-        const strips = Array.from(document.querySelectorAll(selector));
-        for (const strip of strips) {
-          const media = Array.from(strip.querySelectorAll('img, video'));
-          await Promise.all(media.map((m) => waitForMedia(m)));
+      const strips = Array.from(document.querySelectorAll(selector));
+      for (const strip of strips) {
+        const media = Array.from(strip.querySelectorAll('img, video'));
+        if (!media.length) continue;
+        await Promise.all(media.map(waitForMedia));
 
-          if (media.length === 0) {
-            strip.style.height = '';
-            continue;
-          }
+        const ratios = media.map(getRatio);
+        const totalRatio = ratios.reduce((a, b) => a + b, 0);
+        const availableWidth = strip.clientWidth - GAP * (media.length - 1);
 
-          // Compute heights each media would have at its current column width
-          const computedHeights = media.map((m) => {
-            const rect = m.getBoundingClientRect();
-            const availableWidth = rect.width || m.clientWidth || 0;
-            let ratio = 1;
-            if (m.tagName === 'IMG') {
-              ratio = (m.naturalWidth || 1) / (m.naturalHeight || 1);
-            } else if (m.tagName === 'VIDEO') {
-              ratio = (m.videoWidth || rect.width || 1) / (m.videoHeight || rect.height || 1);
-            }
-            return Math.max(1, Math.round(availableWidth / (ratio || 1)));
-          });
+        const rowHeight = Math.max(MIN_H, availableWidth / totalRatio);
 
-          // For "no-crop" mode pick the MIN computed height so all media can
-          // scale to that height without cropping. Clamp to reasonable bounds.
-          const rawTargetH = Math.min(...computedHeights);
-          const MIN_HEIGHT = 80; // px minimum for very small media
-          const MAX_HEIGHT = Math.max(600, Math.round(window.innerHeight * 0.6)); // px cap based on viewport
-          const targetH = Math.min(MAX_HEIGHT, Math.max(MIN_HEIGHT, rawTargetH));
-
-          // Apply target height to strip and media
-          strip.style.height = `${targetH}px`;
-          strip.style.minHeight = `${targetH}px`;
-
-          media.forEach((m) => {
-            // Make media fill the column width while preserving aspect ratio
-            // and matching the computed uniform height (no crop).
-            m.style.width = '100%';
-            m.style.height = `${targetH}px`;
-            m.style.objectFit = 'contain';
-            m.style.display = 'block';
-            m.style.maxWidth = '100%';
-          });
-        }
-      });
+        media.forEach((m, i) => {
+          m.style.height = `${rowHeight}px`;
+          m.style.width = `${rowHeight * ratios[i]}px`;
+          m.style.display = 'block';
+          m.style.flexShrink = '0';
+        });
+      }
     };
 
-    equalize();
-
-    let resizeTimer;
-    const onResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(equalize, 120);
+    const schedule = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(equalize);
     };
-    window.addEventListener('resize', onResize);
 
-    const observer = new MutationObserver(() => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(equalize, 60);
-    });
+    schedule();
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    const ro = new ResizeObserver(schedule);
+    document.querySelectorAll(selector).forEach((strip) => ro.observe(strip));
 
     return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener('resize', onResize);
-      observer.disconnect();
+      cancelAnimationFrame(rafId);
+      ro.disconnect();
     };
-  }, [selector]);
+  }, [selector, enabled]); // <-- re-run when `enabled` flips true
 }
